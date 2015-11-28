@@ -1,0 +1,260 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 7}
+
+\hlkwd{getwd}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## [1] "C:/Users/Roxy/Documents/ROXANA BEATRIZ RONQUILLO UMA�A/Guias de R"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{setwd}\hlstd{(}\hlstr{"C:/Users/Roxy/Documents/jjjjjjjjjj"}\hlstd{)}
+\hlstd{Hijos} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{0}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2} \hlstd{)}
+\hlkwd{data.entry}\hlstd{(Hijos)}
+\hlstd{Hijos}
+\end{alltt}
+\begin{verbatim}
+##  [1] 2 1 2 1 4 2 3 0 2 3 3 2 1 0 2 4 1 2 1 3 4 1 2 3 1 5 2 3 1 2
+\end{verbatim}
+\begin{alltt}
+\hlkwd{length}\hlstd{(Hijos)}
+\end{alltt}
+\begin{verbatim}
+## [1] 30
+\end{verbatim}
+\begin{alltt}
+\hlkwd{write}\hlstd{(Hijos,} \hlstr{"Hijos.txt"}\hlstd{)}
+\hlkwd{ls}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## [1] "Hijos"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{rm}\hlstd{(}\hlkwc{list}\hlstd{=}\hlkwd{ls}\hlstd{(}\hlkwc{all}\hlstd{=}\hlnum{TRUE}\hlstd{));} \hlkwd{ls}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## character(0)
+\end{verbatim}
+\begin{alltt}
+\hlstd{X} \hlkwb{<-} \hlkwd{scan}\hlstd{(}\hlstr{"Hijos.txt"}\hlstd{,} \hlkwc{what} \hlstd{=} \hlkwd{integer}\hlstd{(}\hlnum{0}\hlstd{),} \hlkwc{na.strings} \hlstd{=} \hlstr{"NA"}\hlstd{,} \hlkwc{flush}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\hlkwd{ls}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## [1] "X"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{stripchart}\hlstd{(X,} \hlkwc{method}\hlstd{=}\hlstr{"stack"}\hlstd{,} \hlkwc{vertical}\hlstd{=}\hlnum{FALSE}\hlstd{,} \hlkwc{col}\hlstd{=}\hlstr{"blue"}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{1}\hlstd{,} \hlkwc{main}\hlstd{=}\hlstr{"Grafico de\textbackslash{}n puntos"}\hlstd{,} \hlkwc{xlab}\hlstd{=}\hlstr{"Numero de hijos"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-1} 
+\begin{kframe}\begin{alltt}
+\hlstd{fab} \hlkwb{<-} \hlkwd{table}\hlstd{(X); fab}
+\end{alltt}
+\begin{verbatim}
+## X
+##  0  1  2  3  4  5 
+##  2  8 10  6  3  1
+\end{verbatim}
+\begin{alltt}
+\hlstd{fre} \hlkwb{<-} \hlstd{fab}\hlopt{/}\hlkwd{length}\hlstd{(X); fre}
+\end{alltt}
+\begin{verbatim}
+## X
+##          0          1          2          3          4          5 
+## 0.06666667 0.26666667 0.33333333 0.20000000 0.10000000 0.03333333
+\end{verbatim}
+\begin{alltt}
+\hlstd{Fac} \hlkwb{<-} \hlkwd{cumsum}\hlstd{(fab); Fac}
+\end{alltt}
+\begin{verbatim}
+##  0  1  2  3  4  5 
+##  2 10 20 26 29 30
+\end{verbatim}
+\begin{alltt}
+\hlstd{Far} \hlkwb{<-} \hlstd{Fac}\hlopt{/}\hlkwd{length}\hlstd{(X); Far}
+\end{alltt}
+\begin{verbatim}
+##          0          1          2          3          4          5 
+## 0.06666667 0.33333333 0.66666667 0.86666667 0.96666667 1.00000000
+\end{verbatim}
+\begin{alltt}
+\hlkwd{options}\hlstd{(}\hlkwc{digits}\hlstd{=}\hlnum{2}\hlstd{)}
+\hlstd{tabla} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{fab}\hlstd{=fab,} \hlkwc{fre}\hlstd{=fre,} \hlkwc{Fac}\hlstd{=Fac,} \hlkwc{Far}\hlstd{=Far)}
+\hlkwd{names}\hlstd{(tabla)} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"X"}\hlstd{,} \hlstr{"fab"}\hlstd{,} \hlstr{"free.X"}\hlstd{,} \hlstr{"fre"}\hlstd{,} \hlstr{"Fac"}\hlstd{,} \hlstr{"Far"}\hlstd{)}
+\hlstd{tabla}
+\end{alltt}
+\begin{verbatim}
+##   X fab free.X   fre Fac   Far
+## 0 0   2      0 0.067   2 0.067
+## 1 1   8      1 0.267  10 0.333
+## 2 2  10      2 0.333  20 0.667
+## 3 3   6      3 0.200  26 0.867
+## 4 4   3      4 0.100  29 0.967
+## 5 5   1      5 0.033  30 1.000
+\end{verbatim}
+\begin{alltt}
+\hlstd{tfre} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{X}\hlstd{=tabla}\hlopt{$}\hlstd{X,} \hlkwc{fab}\hlstd{=tabla}\hlopt{$}\hlstd{fab,} \hlkwc{fre}\hlstd{=tabla}\hlopt{$}\hlstd{fre,} \hlkwc{Fac}\hlstd{=tabla}\hlopt{$}\hlstd{Fac,} \hlkwc{Far}\hlstd{=tabla}\hlopt{$}\hlstd{Far)}
+\hlstd{tfre}
+\end{alltt}
+\begin{verbatim}
+##   X fab   fre Fac   Far
+## 1 0   2 0.067   2 0.067
+## 2 1   8 0.267  10 0.333
+## 3 2  10 0.333  20 0.667
+## 4 3   6 0.200  26 0.867
+## 5 4   3 0.100  29 0.967
+## 6 5   1 0.033  30 1.000
+\end{verbatim}
+\begin{alltt}
+\hlstd{media} \hlkwb{<-} \hlkwd{mean}\hlstd{(X,} \hlkwc{na.rm} \hlstd{=} \hlnum{FALSE}\hlstd{); media}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.1
+\end{verbatim}
+\begin{alltt}
+\hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(X))} \hlkwa{if} \hlstd{(fab[i]} \hlopt{==} \hlkwd{max}\hlstd{(fab))} \hlkwa{break}\hlstd{()}
+\hlstd{moda} \hlkwb{<-} \hlkwd{names}\hlstd{(fab[i]); moda} \hlcom{# R no tiene incorporada una funcion para la moda}
+\end{alltt}
+\begin{verbatim}
+## [1] "2"
+\end{verbatim}
+\begin{alltt}
+\hlstd{mediana} \hlkwb{<-} \hlkwd{median}\hlstd{(X); mediana}
+\end{alltt}
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+\begin{alltt}
+\hlkwd{range}\hlstd{(X)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0 5
+\end{verbatim}
+\begin{alltt}
+\hlstd{cuasivar} \hlkwb{<-} \hlkwd{var}\hlstd{(X); cuasivar}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.5
+\end{verbatim}
+\begin{alltt}
+\hlstd{s} \hlkwb{<-} \hlkwd{sd}\hlstd{(X); s}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.2
+\end{verbatim}
+\begin{alltt}
+\hlkwd{quantile}\hlstd{(X,}\hlkwd{c}\hlstd{(}\hlnum{0.25}\hlstd{,} \hlnum{0.5}\hlstd{,} \hlnum{0.75}\hlstd{))}
+\end{alltt}
+\begin{verbatim}
+## 25% 50% 75% 
+##   1   2   3
+\end{verbatim}
+\begin{alltt}
+\hlkwd{quantile}\hlstd{(X,} \hlnum{0.6}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 60% 
+##   2
+\end{verbatim}
+\begin{alltt}
+\hlstd{resumen} \hlkwb{<-} \hlkwd{summary}\hlstd{(X); resumen}
+\end{alltt}
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     0.0     1.0     2.0     2.1     3.0     5.0
+\end{verbatim}
+\begin{alltt}
+\hlkwd{fivenum}\hlstd{(X)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0 1 2 3 5
+\end{verbatim}
+\begin{alltt}
+\hlkwd{barplot}\hlstd{(tfre[[}\hlnum{2}\hlstd{]],} \hlkwc{main}\hlstd{=}\hlstr{"Grafico de barras"}\hlstd{,} \hlkwc{xlab}\hlstd{=}\hlstr{"X = Numero Hijos\textbackslash{}n"}\hlstd{,} \hlkwc{ylab}\hlstd{=}\hlstr{"frecuencia"}\hlstd{,}
+        \hlkwc{col}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"yellow"}\hlstd{,} \hlstr{"blue"}\hlstd{,} \hlstr{"white"}\hlstd{,} \hlstr{"orange"}\hlstd{,} \hlstr{"cyan"}\hlstd{,} \hlstr{"red"}\hlstd{),} \hlkwc{sub}\hlstd{=}\hlstr{"Agosto-2012"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-2} 
+\begin{kframe}\begin{alltt}
+\hlkwd{pie}\hlstd{(tfre[[}\hlnum{2}\hlstd{]],} \hlkwc{main}\hlstd{=}\hlstr{"Grafico de pastel"}\hlstd{,} \hlkwc{xlab}\hlstd{=}\hlstr{"Numero Hijos \textbackslash{}n"}\hlstd{,} \hlkwc{col}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"yellow"}\hlstd{,} \hlstr{"blue"}\hlstd{,}
+                                                                       \hlstr{"white"}\hlstd{,} \hlstr{"orange"}\hlstd{,} \hlstr{"cyan"}\hlstd{,} \hlstr{"red"}\hlstd{),} \hlkwc{sub}\hlstd{=}\hlstr{"Agosto-2012"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-3} 
+\begin{kframe}\begin{alltt}
+\hlkwd{names}\hlstd{(fab)} \hlkwb{=} \hlkwd{c}\hlstd{(}\hlstr{"Cero"}\hlstd{,} \hlstr{"Uno"}\hlstd{,} \hlstr{"Dos"}\hlstd{,} \hlstr{"Tres"}\hlstd{,} \hlstr{"Cuatro"}\hlstd{,} \hlstr{"Cinco"}\hlstd{)}
+\hlkwd{pie}\hlstd{(fab,} \hlkwc{main}\hlstd{=}\hlstr{"Gráfico de pastel"}\hlstd{,} \hlkwc{xlab}\hlstd{=}\hlstr{"X = Número Hijos\textbackslash{}n"}\hlstd{,} \hlkwc{col}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"yellow"}\hlstd{,} \hlstr{"blue"}\hlstd{,}
+                                                                      \hlstr{"white"}\hlstd{,} \hlstr{"orange"}\hlstd{,} \hlstr{"cyan"}\hlstd{,} \hlstr{"red"}\hlstd{),} \hlkwc{sub}\hlstd{=}\hlstr{"Agosto-2012"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-4} 
+\begin{kframe}\begin{alltt}
+\hlkwd{boxplot}\hlstd{(X,} \hlkwc{main}\hlstd{=}\hlstr{"Grafico de caja"}\hlstd{,} \hlkwc{ylab}\hlstd{=}\hlstr{"Numero de hijos\textbackslash{}n"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-5} 
+\begin{kframe}\begin{alltt}
+\hlkwd{boxplot}\hlstd{(X,} \hlkwc{main}\hlstd{=}\hlstr{"Grafico de caja"}\hlstd{,} \hlkwc{xlab}\hlstd{=}\hlstr{" Número de hijos\textbackslash{}n"}\hlstd{,} \hlkwc{plot}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{border}\hlstd{=}\hlstr{"red"}\hlstd{,}\hlkwc{col}\hlstd{=}\hlstr{"yellow"}\hlstd{,} \hlkwc{horizontal}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-6} 
+
+\end{knitrout}
+
+
+
+\end{document}

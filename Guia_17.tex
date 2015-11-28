@@ -1,0 +1,156 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 17}
+
+\hlstd{simulIntProp} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{m}\hlstd{=}\hlnum{5}\hlstd{,} \hlkwc{n}\hlstd{=}\hlnum{1}\hlstd{,} \hlkwc{p}\hlstd{,} \hlkwc{nivel.conf}\hlstd{=}\hlnum{0.95}\hlstd{)}
+\hlstd{\{}
+\hlstd{X} \hlkwb{<-} \hlkwd{rbinom}\hlstd{(m, n, p)}
+\hlcom{# Matriz con 1000 valores aleatorios binomial(n,p), 50 muestras cada una de tamaño 20}
+\hlstd{pe} \hlkwb{<<-} \hlstd{X}\hlopt{/}\hlstd{n}
+\hlcom{# Calcula la proporción estimada en cada una de las muestras.}
+\hlstd{SE} \hlkwb{<<-} \hlkwd{sqrt}\hlstd{(pe}\hlopt{*}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{pe)}\hlopt{/}\hlstd{n)}
+\hlcom{# Calcula la desviación estándar estimada en cada una de las muestras.}
+\hlstd{alfa} \hlkwb{<-} \hlnum{1}\hlopt{-}\hlstd{nivel.conf}
+\hlstd{z} \hlkwb{<<-} \hlkwd{qnorm}\hlstd{(}\hlnum{1}\hlopt{-}\hlstd{alfa}\hlopt{/}\hlnum{2}\hlstd{)}
+\hlstd{Intervalo} \hlkwb{<<-} \hlkwd{cbind}\hlstd{(pe} \hlopt{-} \hlstd{z}\hlopt{*}\hlstd{SE, pe} \hlopt{+} \hlstd{z}\hlopt{*}\hlstd{SE)}
+\hlcom{# genera los extremos del intervalo de confianza}
+\hlstd{nInter} \hlkwb{<<-} \hlnum{0}
+\hlcom{# un contador para conocer en cuántos intervalos se encuentra la verdadera proporción.}
+\hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlstd{m)}
+\hlkwa{if} \hlstd{((p} \hlopt{>=} \hlstd{Intervalo[i,} \hlnum{1}\hlstd{])} \hlopt{&&} \hlstd{(p} \hlopt{<=} \hlstd{Intervalo[i,} \hlnum{2}\hlstd{]))}
+\hlstd{nInter} \hlkwb{<<-} \hlstd{nInter} \hlopt{+} \hlnum{1}
+\hlcom{# función que cuenta cuántos intervalos contienen el verdadero valor del parámetro.}
+\hlkwd{return}\hlstd{(nInter)}
+\hlstd{\}}
+\hlstd{n}\hlkwb{=}\hlnum{20}\hlstd{; m}\hlkwb{=} \hlnum{50}\hlstd{; p}\hlkwb{=}\hlnum{0.5}\hlstd{; nivel.conf}\hlkwb{=}\hlnum{0.95}
+\hlkwd{simulIntProp}\hlstd{(m, n, p, nivel.conf)}
+\end{alltt}
+\begin{verbatim}
+## [1] 46
+\end{verbatim}
+\begin{alltt}
+\hlstd{Intervalo} \hlcom{# para visualizar cada uno de los intervalos generados}
+\end{alltt}
+\begin{verbatim}
+##             [,1]      [,2]
+##  [1,] 0.09916346 0.5008365
+##  [2,] 0.49916346 0.9008365
+##  [3,] 0.18529670 0.6147033
+##  [4,] 0.33196777 0.7680322
+##  [5,] 0.56022730 0.9397727
+##  [6,] 0.23196777 0.6680322
+##  [7,] 0.23196777 0.6680322
+##  [8,] 0.09916346 0.5008365
+##  [9,] 0.06022730 0.4397727
+## [10,] 0.44096270 0.8590373
+## [11,] 0.23196777 0.6680322
+## [12,] 0.44096270 0.8590373
+## [13,] 0.33196777 0.7680322
+## [14,] 0.49916346 0.9008365
+## [15,] 0.09916346 0.5008365
+## [16,] 0.28086936 0.7191306
+## [17,] 0.28086936 0.7191306
+## [18,] 0.18529670 0.6147033
+## [19,] 0.44096270 0.8590373
+## [20,] 0.33196777 0.7680322
+## [21,] 0.28086936 0.7191306
+## [22,] 0.44096270 0.8590373
+## [23,] 0.02469549 0.3753045
+## [24,] 0.38529670 0.8147033
+## [25,] 0.28086936 0.7191306
+## [26,] 0.14096270 0.5590373
+## [27,] 0.02469549 0.3753045
+## [28,] 0.18529670 0.6147033
+## [29,] 0.33196777 0.7680322
+## [30,] 0.23196777 0.6680322
+## [31,] 0.23196777 0.6680322
+## [32,] 0.23196777 0.6680322
+## [33,] 0.23196777 0.6680322
+## [34,] 0.28086936 0.7191306
+## [35,] 0.44096270 0.8590373
+## [36,] 0.33196777 0.7680322
+## [37,] 0.28086936 0.7191306
+## [38,] 0.38529670 0.8147033
+## [39,] 0.44096270 0.8590373
+## [40,] 0.14096270 0.5590373
+## [41,] 0.23196777 0.6680322
+## [42,] 0.49916346 0.9008365
+## [43,] 0.44096270 0.8590373
+## [44,] 0.09916346 0.5008365
+## [45,] 0.33196777 0.7680322
+## [46,] 0.28086936 0.7191306
+## [47,] 0.38529670 0.8147033
+## [48,] 0.14096270 0.5590373
+## [49,] 0.38529670 0.8147033
+## [50,] 0.23196777 0.6680322
+\end{verbatim}
+\begin{alltt}
+\hlstd{nInter}
+\end{alltt}
+\begin{verbatim}
+## [1] 46
+\end{verbatim}
+\begin{alltt}
+\hlcom{# para visualizar en cuántos de estos intervalos se encuentra la verdadera proporción.}
+\hlcom{#Gráfico que muestra los intervalos de confianza de 95% que contienen y no contienen el verdadero valor del parámetro p.}
+\hlkwd{matplot}\hlstd{(}\hlkwd{rbind}\hlstd{(pe} \hlopt{-} \hlstd{z}\hlopt{*}\hlstd{SE, pe} \hlopt{+} \hlstd{z}\hlopt{*}\hlstd{SE),} \hlkwd{rbind}\hlstd{(}\hlnum{1}\hlopt{:}\hlstd{m,} \hlnum{1}\hlopt{:}\hlstd{m),} \hlkwc{type}\hlstd{=}\hlstr{"l"}\hlstd{,} \hlkwc{lty}\hlstd{=}\hlnum{1}\hlstd{)}
+\hlkwd{abline}\hlstd{(}\hlkwc{v}\hlstd{=p)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-1} 
+
+\end{knitrout}
+\end{document}

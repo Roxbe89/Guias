@@ -1,0 +1,126 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+#GUIA 8
+
+Notas<-c(4.47,4.47,3.48,5.0,3.42,3.78,3.1,3.57,4.2,4.5,3.6,3.75,4.5,2.85,3.7,4.2,3.2,4.05,4.9,5.1,5.3,4.16,4.56,3.54,3.5,5.2,4.71,3.7,4.78,4.14,4.14,4.8,4.1,3.83,3.6,2.98,4.32,5.1,4.3,3.9,3.96,3.54,4.8,4.3,3.39,4.47,3.19,3.75,3.1,4.7,3.69,3.3,2.85,5.25,4.68,4.04,4.44,5.43,3.04,2.95);Notas
+data.entry(Notas)
+Notas
+length(Notas)
+write(Notas, "Notas.txt")
+ls()
+rm(list=ls(all=TRUE))
+ls()
+X <- scan("Notas.txt", what = double(0), na.strings = "NA", flush=FALSE)
+ls()
+n <- length(X); n
+k <- 1+3.322*logb(60, 10); k
+k <- round(k); k
+rango <- max(X)-min(X); rango
+a=rango/k; a
+a <- round(a, 3); a
+rango <- max(X)-min(X); rango
+a=rango/k; a
+a <- round(a, 3); a
+limites <- seq(from=min(X)-0.01/2, to=max(X)+0.01/2, by=a); limites
+options(digits=4)
+ci <- cbind(1:k); ci
+for(i in 2:length(limites)) ci[i-1, 1] <- (limites[i] + limites[i-1])/2
+ci
+options(digits=2)
+fi <- cbind(table(cut(X, breaks = limites, labels=NULL, include.lowest=FALSE,
+right=FALSE, dig.lab=4))); fi
+options(digits=4)
+fri <- fi/n; fri
+options(digits=2)
+Fi <- cumsum(fi); Fi
+options(digits=4)
+Fri <- Fi/n; Fri
+tablaFrec <- data.frame(ci=ci, fi=fi, fri=fri, Fi=Fi, Fri=Fri); tablaFrec
+
+h <- hist(X, breaks=c(limites[1]-a, limites, limites[k+1]+a), freq = TRUE, probability = FALSE,
+include.lowest = FALSE,right = TRUE, main = "Histograma de frecuencias",
+col="lightyellow", lty=1, border="purple", xlab=" Notas de aspirantes", ylab="Frecuencia (fi)",
+axes=TRUE, labels=FALSE)
+text(h$mids, h$density, h$counts, adj=c(0.5, -0.5), col="red")
+rug(jitter(X)) # adiciona marcas de los datos
+is.list(h); h
+
+h <- hist(X, breaks=c(limites[1]-a, limites, limites[k+1]+a), freq = FALSE,
+probability = TRUE, include.lowest = FALSE, right = TRUE,
+main="Aproximacion a una Normal\n", col="lightyellow",lty=1,border="purple",
+xlab="Notas de aspirantes\n", ylab="Frecuencia relativa (fri)",
+axes=TRUE, labels=FALSE)
+text(h$mids, h$density, h$counts, adj=c(0.5, 0.2), col="red")
+rug(jitter(X)) # adiciona marcas de los datos
+curve(dnorm(x, mean=mean(X), sd=sd(X)), col = 2, lty = 2,lwd = 2, add = TRUE)
+
+h <- hist(X, breaks=c(limites[1]-a, limites, limites[k+1]+a), freq = TRUE,
+probability=FALSE, include.lowest=FALSE,right=TRUE,
+main = "Poligono de frecuencias",col="lightyellow", lty=1, border="purple", xlab="
+Notas de aspirantes", ylab="Frecuencia (fi)", axes=TRUE, labels=FALSE)
+text(h$mids, h$density, h$counts, adj=c(0.5, -0.5), col="red")
+rug(jitter(X)) # adiciona marcas de los datos
+vCi <- c(h$mids[1]-a, h$mids, h$mids[k+1]+a); vCi
+vfi <- c(0, h$counts, 0); vfi
+lines(vCi, vfi, col="blue", type="l")
+Fia <- c(0, Fi); Fia
+plot(limites, Fia, type = "p", pch=1, col = "blue", main="Ojiva ascendente",
+xlab="Notas de aspirantes", ylab="Frecuencia acumulada (Fi)")
+text(limites, h$density, Fia, adj=c(0.5, -0.5), col="red")
+lines(limites, Fia, col="black", type="l")
+
+#Calcula los principales estadadisticos descriptivos de la variable
+# Calcula la moda, ya que el R no proporciona una funciÃ³n para eso.
+options(digits=4)
+for(i in 1:k) if (fi[i] == max(fi)) break()
+if(i > 1) moda <- limites[i]+((fi[i]-fi[i-1])/((fi[i]-fi[i-1])+(fi[i]-fi[i+1]) ))*a else  moda <- limites[i]+(fi[i]/(fi[i]+(fi[i]-fi[i+1])))*a
+moda
+
+# Calcula los cuartiles: Q1, Q2, Q3
+Q <- 1:3
+for(v in 1:3) for(i in 1:k) if (Fi[i] > (v*25*n)/100)
+{
+Q[v] <- limites[i]+(((25*v*n/100)-Fi[i-1])/fi[i])*a
+break
+}
+Q
+
+#Calcula los principales estadisticos.
+estadisticos <- rbind(media=sum(tabEstad$cifi)/n, moda=moda, Q1=Q[1], Q2=Q[2], Q3=Q[3],
+rango=max(X)-min(X), varianza=sum(tabEstad$ciMedia2fi)/n,
+Desviacion=sqrt(sum(tabEstad$ciMedia2fi)/n),
+CoeficienteVariacion=sqrt(sum(tabEstad$ciMedia2fi)/n)/(sum(tabEstad$cifi)/n),
+CAfisher=(sum(tabEstad$ciMedia3fi)/n)/sqrt(sum(tabEstad$ciMedia2fi)/n)^3,
+CoeficienteCurtosis=((sum(tabEstad$ciMedia4fi)/n)/sqrt(sum(tabEstad$ciMedia2fi)/n)^4)-3)
+estadisticos
+
+# Grafico de cajas
+boxplot(X, main="GrÃ¡fico de caja", xlab="Notas", notch=FALSE,
+data=parent.frame(), plot=TRUE, border="red", col="yellow",horizontal=TRUE)
+#Observacion: en la funciÃ³n boxplot(), sÃ? plot es FALSE se produce un resumen de los valores (los cinco numeros).
+
+
+windows()
+boxplot(X, main="Grafico de caja", xlab="X = Notas", notch=TRUE,
+data=parent.frame(), plot=TRUE, border="red", col="yellow",horizontal=TRUE)
+
+par(mfrow=c(1,2)) # Divide la ventana grafica en dos partes (1 fila, 2 columnas)
+mtext(side=3, line=0, cex=2, outer=T, "Titulo para Toda la Pagina")
+hist(X); boxplot(X)
+
+#Calcula los principales estadísticos descriptivos de la variable
+# Calcula la moda, ya que el R no proporciona una función para eso.
+options(digits=4)
+for(i in 1:k) if (fi[i] == max(fi)) break()
+if(i > 1) moda <- limites[i]+((fi[i]-fi[i-1])/((fi[i]-fi[i-1])+(fi[i]-fi[i+1]) ))*a
+moda <- limites[i]+(fi[i]/(fi[i]+(fi[i]-fi[i+1])))*a
+moda
+#Varios gráficos en una misma ventana
+par(mfrow=c(1,2)) # Divide la ventana gráfica en dos partes (1 fila, 2 columnas)
+mtext(side=3, line=0, cex=2, outer=T, "Titulo para Toda la Página")
+hist(X); boxplot(X)
+@
+\end{document}

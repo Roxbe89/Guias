@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+#GUIA 16
+
+# tm= tamaño de la muestra
+tm=100; n <- 10; p <- 0.25
+#generando las 100 números aleatorios
+S = rbinom(tm, n, p)
+# estandarizando cada una de las observaciones
+Z = (S-n*p)/sqrt(n*p*(1-p)); Z
+
+hist(Z, main="Histograma de Z ~ N(0, 1)", xlab="z = número binomiales estándarizados",
+ylab="f(z)", prob=TRUE, col="khaki")
+curve(dnorm(x, 0, 1), col = "deepskyblue", lty=2, lwd=2, add=TRUE)
+
+simulNorm <- function(mu, sigma, m=5, n=100)
+{
+vectMedias <<- numeric(0)
+MediasEstand <<- numeric(0)
+for (i in 1:m)
+{
+X = rnorm(n, mu, sigma)
+# genera n valores normales
+vectMedias[i] <<- mean(X)
+MediasEstand[i] <<- (vectMedias[i] - mu)/(sigma/sqrt(n))
+}
+}
+mu=5; sigma=5
+m <- 200
+# número de muestras o medias a obtener
+simulNorm(mu, sigma, m)
+hist(MediasEstand, main="Histograma de medias estándarizadas", xlab="Valores de m
+medias normales estándarizadas", prob=TRUE, col="darkolivegreen3")
+curve(dnorm(x, 0, 1), col = "deeppink3", lty=2, lwd=2, add=TRUE)
+
+qqnorm(MediasEstand, main="X ~ N(0, 1)")
+#muestra la línea
+qqline(MediasEstand, lty=1, lwd=2, col="red")
+
+simulExp <- function(mu, m=5, n=100)
+{
+razon <- 1/mu
+vectMedias <<- numeric(0)
+MediasEstand <<- numeric(0)
+for (i in 1:m)
+{
+X = rexp(n, razon)
+# genera n valores exponenciales
+vectMedias[i] <<- mean(X)
+MediasEstand[i] <<- (vectMedias[i] - mu)/(mu/sqrt(n))
+}
+}
+par(mfrow=c(2,2))
+# para n=1
+mu=10
+m <- 100; n <- 1
+simulExp(mu, m, n)
+hist(MediasEstand, main="Medias Exp(10); n=1", xlab="m medias exp estándarizadas",
+prob=TRUE, col="darkolivegreen3")
+xvals = seq(from=-3, to=3, by=0.01)
+points(xvals, dnorm(xvals, 0, 1), col = "red", type="l", lty=1, lwd=2)
+
+# para n=5
+n <- 5
+simulExp(mu, m, n)
+hist(MediasEstand, main="Medias Exp(10); n=5", xlab="m medias exp estándarizadas",
+prob=TRUE, col="darkolivegreen3")
+xvals = seq(from=-3, to=3, by=0.01)
+points(xvals, dnorm(xvals, 0, 1), col = "red", type="l", lty=1, lwd=2)
+@
+
+
+
+\end{document}

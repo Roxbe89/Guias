@@ -1,0 +1,546 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  26 NOV 2015 22:09
+entering extended mode
+**Guia_8.tex
+(Guia_8.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+) (framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (Guia_8.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen109
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen110
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+)
+Package color Info: Redefining color shadecolor on input line 55.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 59.
+
+Overfull \hbox (1172.23677pt too wide) in paragraph at lines 59--59
+[][]\OT1/cmtt/m/n/10 Notas[][]<-[][]c[][]([][]4.47[][],[][]4.47[][],[][]3.48[][
+],[][]5.0[][],[][]3.42[][],[][]3.78[][],[][]3.1[][],[][]3.57[][],[][]4.2[][],[]
+[]4.5[][],[][]3.6[][],[][]3.75[][],[][]4.5[][],[][]2.85[][],[][]3.7[][],[][]4.2
+[][],[][]3.2[][],[][]4.05[][],[][]4.9[][],[][]5.1[][],[][]5.3[][],[][]4.16[][],
+[][]4.56[][],[][]3.54[][],[][]3.5[][],[][]5.2[][],[][]4.71[][],[][]3.7[][],[][]
+4.78[][],[][]4.14[][],[][]4.14[][],[][]4.8[][],[][]4.1[][],[][]3.83[][],[][]3.6
+[][],[][]2.98[][],[][]4.32[][],[][]5.1[][],[][]4.3[][],[][]3.9[][],[][]3.96[][]
+,[][]3.54[][],[][]4.8[][],[][]4.3[][],[][]3.39[][],[][]4.47[][],[][]3.19[][],[]
+[]3.75[][],[][]3.1[][],[][]4.7[][],[][]3.69[][],[][]3.3[][],[][]2.85[][],[][]5.
+25[][],[][]4.68[][],[][]4.04[][],[][]4.44[][],[][]5.43[][],[][]3.04[][],[][]2.9
+5[][]);Notas[][] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 67--67
+[]\OT1/cmtt/m/n/10 ##  [1] 4.47 4.47 3.48 5.00 3.42 3.78 3.10 3.57 4.20 4.50 3.
+60 3.75 4.50 2.85[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 67--67
+[]\OT1/cmtt/m/n/10 ## [15] 3.70 4.20 3.20 4.05 4.90 5.10 5.30 4.16 4.56 3.54 3.
+50 5.20 4.71 3.70[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 67--67
+[]\OT1/cmtt/m/n/10 ## [29] 4.78 4.14 4.14 4.80 4.10 3.83 3.60 2.98 4.32 5.10 4.
+30 3.90 3.96 3.54[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 67--67
+[]\OT1/cmtt/m/n/10 ## [43] 4.80 4.30 3.39 4.47 3.19 3.75 3.10 4.70 3.69 3.30 2.
+85 5.25 4.68 4.04[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 78--78
+[]\OT1/cmtt/m/n/10 ##  [1] 4.47 4.47 3.48 5.00 3.42 3.78 3.10 3.57 4.20 4.50 3.
+60 3.75 4.50 2.85[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 78--78
+[]\OT1/cmtt/m/n/10 ## [15] 3.70 4.20 3.20 4.05 4.90 5.10 5.30 4.16 4.56 3.54 3.
+50 5.20 4.71 3.70[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 78--78
+[]\OT1/cmtt/m/n/10 ## [29] 4.78 4.14 4.14 4.80 4.10 3.83 3.60 2.98 4.32 5.10 4.
+30 3.90 3.96 3.54[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 78--78
+[]\OT1/cmtt/m/n/10 ## [43] 4.80 4.30 3.39 4.47 3.19 3.75 3.10 4.70 3.69 3.30 2.
+85 5.25 4.68 4.04[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 100--100
+[][]\OT1/cmtt/m/n/10 X[] []<-[] []scan[][]([][]"Notas.txt"[][],[] []what[] []=[
+] []double[][]([][]0[][]),[] []na.strings[] []=[] []"NA"[][],[] []flush[][]=[][
+]FALSE[][])[][] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 161--161
+[][]\OT1/cmtt/m/n/10 limites[] []<-[] []seq[][]([][]from[][]=[][]min[][](X)[][]
+-[][]0.01[][]/[][]2[][],[] []to[][]=[][]max[][](X)[][]+[][]0.01[][]/[][]2[][],[
+] []by[][]=a); limites[][] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 181--181
+[][]\OT1/cmtt/m/n/10 for[][](i[] []in[] []2[][]:[][]length[][](limites)) ci[i[]
+[]-[][]1[][],[] []1[][]][] []<-[] [](limites[i][] []+[] []limites[i[][]-[][]1[]
+[]])[][]/[][]2[][] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 196--196
+[][]\OT1/cmtt/m/n/10 fi[] []<-[] []cbind[][]([][]table[][]([][]cut[][](X,[] []b
+reaks[] []= limites,[] []labels[][]=[][]NULL[][],[] []include.lowest[][]=[][]FA
+LSE[][],[][] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 238--238
+[][]\OT1/cmtt/m/n/10 tablaFrec[] []<-[] []data.frame[][]([][]ci[][]=ci,[] []fi[
+][]=fi,[] []fri[][]=fri,[] []Fi[][]=Fi,[] []Fri[][]=Fri); tablaFrec[][] 
+ []
+
+
+Overfull \hbox (153.74565pt too wide) in paragraph at lines 251--251
+[][]\OT1/cmtt/m/n/10 h[] []<-[] []hist[][](X,[] []breaks[][]=[][]c[][](limites[
+[][]1[][]][][]-[][]a, limites, limites[k[][]+[][]1[][]][][]+[][]a),[] []freq[] 
+[]=[] []TRUE[][],[] []probability[] []=[] []FALSE[][],[][] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 252--252
+[][]\OT1/cmtt/m/n/10 include.lowest[] []=[] []FALSE[][],[][]right[] []=[] []TRU
+E[][],[] []main[] []=[] []"Histograma de frecuencias"[][],[][] 
+ []
+
+
+Overfull \hbox (153.74565pt too wide) in paragraph at lines 253--253
+[][]\OT1/cmtt/m/n/10 col[][]=[][]"lightyellow"[][],[] []lty[][]=[][]1[][],[] []
+border[][]=[][]"purple"[][],[] []xlab[][]=[][]" Notas de aspirantes"[][],[] []y
+lab[][]=[][]"Frecuencia (fi)"[][],[][] 
+ []
+
+[1
+
+{C:/Users/Roxy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+[3] <figure/unnamed-chunk-1-1.pdf, id=14, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-1.pdf used on input line 259.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 259--260
+[][] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 285--285
+[]\OT1/cmtt/m/n/10 ##  [1] 2.476 2.845 3.214 3.583 3.952 4.321 4.690 5.059 5.42
+8 5.797[] 
+ []
+
+
+Overfull \hbox (64.49643pt too wide) in paragraph at lines 285--285
+[]\OT1/cmtt/m/n/10 ## [1] 0.00000 0.40650 0.36134 0.45167 0.54201 0.36134 0.316
+17 0.22584 0.04517[] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 287--287
+[][]\OT1/cmtt/m/n/10 h[] []<-[] []hist[][](X,[] []breaks[][]=[][]c[][](limites[
+[][]1[][]][][]-[][]a, limites, limites[k[][]+[][]1[][]][][]+[][]a),[] []freq[] 
+[]=[] []FALSE[][],[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 289
+.
+(C:/PROGRA~1/R/R-32~1.1/share/texmf/tex/latex\omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 289.
+
+Overfull \hbox (53.74658pt too wide) in paragraph at lines 289--289
+[][]\OT1/cmtt/m/n/10 main[][]=[][]"Aproximacion a una Normal\OMS/cmsy/m/n/10 n\
+OT1/cmtt/m/n/10 n"[][],[] []col[][]=[][]"lightyellow"[][],[][]lty[][]=[][]1[][]
+,[][]border[][]=[][]"purple"[][],[][] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 294--294
+[][]\OT1/cmtt/m/n/10 curve[][]([][]dnorm[][](x,[] []mean[][]=[][]mean[][](X),[]
+ []sd[][]=[][]sd[][](X)),[] []col[] []=[] []2[][],[] []lty[] []=[] []2[][],[][]
+lwd[] []=[] []2[][],[] []add[] []=[] []TRUE[][])[][] 
+ []
+
+[4 <./figure/unnamed-chunk-1-1.pdf>]
+<figure/unnamed-chunk-1-2.pdf, id=24, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-2.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-2.pdf used on input line 297.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 297--298
+[][] 
+ []
+
+[5]
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 299--299
+[][]\OT1/cmtt/m/n/10 h[] []<-[] []hist[][](X,[] []breaks[][]=[][]c[][](limites[
+[][]1[][]][][]-[][]a, limites, limites[k[][]+[][]1[][]][][]+[][]a),[] []freq[] 
+[]=[] []TRUE[][],[][] 
+ []
+
+
+Overfull \hbox (85.49625pt too wide) in paragraph at lines 301--302
+[][]\OT1/cmtt/m/n/10 main[] []=[] []"Poligono de frecuencias"[][],[][]col[][]=[
+][]"lightyellow"[][],[] []lty[][]=[][]1[][],[] []border[][]=[][]"purple"[][],[]
+ []xlab[][]=[][]"[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 302--302
+[]\OT1/cmtt/m/n/10 Notas de aspirantes"[][],[] []ylab[][]=[][]"Frecuencia (fi)"
+[][],[] []axes[][]=[][]TRUE[][],[] []labels[][]=[][]FALSE[][])[][] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 309--309
+[]\OT1/cmtt/m/n/10 ##  [1] 2.292 2.660 3.030 3.399 3.768 4.136 4.505 4.875 5.24
+4 5.613 5.613[] 
+ []
+
+<figure/unnamed-chunk-1-3.pdf, id=29, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-3.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-3.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-3.pdf used on input line 320.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 320--321
+[][] 
+ []
+
+[6 <./figure/unnamed-chunk-1-2.pdf>]
+Overfull \hbox (53.99652pt too wide) in paragraph at lines 328--328
+[][]\OT1/cmtt/m/n/10 plot[][](limites, Fia,[] []type[] []=[] []"p"[][],[] []pch
+[][]=[][]1[][],[] []col[] []=[] []"blue"[][],[] []main[][]=[][]"Ojiva ascendent
+e"[][],[][] 
+ []
+
+<figure/unnamed-chunk-1-4.pdf, id=39, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-4.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-4.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-4.pdf used on input line 334.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 334--335
+[][] 
+ []
+
+[7 <./figure/unnamed-chunk-1-3.pdf>]
+Overfull \hbox (8.48305pt too wide) in paragraph at lines 336--336
+[][]\OT1/cmtt/m/it/10 #Calcula los principales estadadisticos descriptivos de l
+a variable[][] 
+ []
+
+Missing character: There is no Ã in font cmitt10!
+Missing character: There is no ³ in font cmitt10!
+
+Overfull \hbox (3.2331pt too wide) in paragraph at lines 337--337
+[][]\OT1/cmtt/m/it/10 # Calcula la moda, ya que el R no proporciona una funcin 
+para eso.[][] 
+ []
+
+
+Overfull \hbox (400.4935pt too wide) in paragraph at lines 340--340
+[][]\OT1/cmtt/m/n/10 if[][](i[] []>[] []1[][]) moda[] []<-[] []limites[i][][]+[
+][]((fi[i][][]-[][]fi[i[][]-[][]1[][]])[][]/[][]((fi[i][][]-[][]fi[i[][]-[][]1[
+][]])[][]+[][](fi[i][][]-[][]fi[i[][]+[][]1[][]]) ))[][]*[][]a[] []else[]  []mo
+da[] []<-[] []limites[i][][]+[][](fi[i][][]/[][](fi[i][][]+[][](fi[i][][]-[][]f
+i[i[][]+[][]1[][]])))[][]*[][]a[][] 
+ []
+
+
+Overfull \hbox (111.74602pt too wide) in paragraph at lines 361--361
+[][]\OT1/cmtt/m/n/10 estadisticos[] []<-[] []rbind[][]([][]media[][]=[][]sum[][
+](tabEstad[][]$[][]cifi)[][]/[][]n,[] []moda[][]=moda,[] []Q1[][]=Q[[][]1[][]],
+[] []Q2[][]=Q[[][]2[][]],[] []Q3[][]=Q[[][]3[][]],[][] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 364--364
+[][]\OT1/cmtt/m/n/10 CoeficienteVariacion[][]=[][]sqrt[][]([][]sum[][](tabEstad
+[][]$[][]ciMedia2fi)[][]/[][]n)[][]/[][]([][]sum[][](tabEstad[][]$[][]cifi)[][]
+/[][]n),[][] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 365--365
+[][]\OT1/cmtt/m/n/10 CAfisher[][]=([][]sum[][](tabEstad[][]$[][]ciMedia3fi)[][]
+/[][]n)[][]/[][]sqrt[][]([][]sum[][](tabEstad[][]$[][]ciMedia2fi)[][]/[][]n)[][
+]^[][]3[][],[][] 
+ []
+
+
+Overfull \hbox (116.99597pt too wide) in paragraph at lines 366--366
+[][]\OT1/cmtt/m/n/10 CoeficienteCurtosis[][]=(([][]sum[][](tabEstad[][]$[][]ciM
+edia4fi)[][]/[][]n)[][]/[][]sqrt[][]([][]sum[][](tabEstad[][]$[][]ciMedia2fi)[]
+[]/[][]n)[][]^[][]4[][])[][]-[][]3[][])[][] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 370--370
+[]\OT1/cmtt/m/n/10 ## Error in rbind(media = sum(tabEstad$cifi)/n, moda = moda,
+ Q1 = Q[1],
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 375--375
+[]\OT1/cmtt/m/n/10 ## Error in eval(expr, envir, enclos): objeto 'estadisticos'
+ no encontrado[] 
+ []
+
+Missing character: There is no Ã in font cmtt10!
+Missing character: There is no ¡ in font cmtt10!
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 378--378
+[][]\OT1/cmtt/m/n/10 data[][]=[][]parent.frame[][](),[] []plot[][]=[][]TRUE[][]
+,[] []border[][]=[][]"red"[][],[] []col[][]=[][]"yellow"[][],[][]horizontal[][]
+=[][]TRUE[][])[][] 
+ []
+
+[8 <./figure/unnamed-chunk-1-4.pdf>]
+<figure/unnamed-chunk-1-5.pdf, id=59, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-5.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-5.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-5.pdf used on input line 381.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 381--382
+[][] 
+ []
+
+[9]
+Missing character: There is no Ã in font cmitt10!
+Missing character: There is no ³ in font cmitt10!
+Missing character: There is no Ã in font cmitt10!
+
+Overfull \hbox (244.73099pt too wide) in paragraph at lines 383--383
+[][]\OT1/cmtt/m/it/10 #Observacion: en la funcin boxplot(), s? plot es FALSE se
+ produce un resumen de los valores (los cinco numeros).[][] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 388--388
+[][]\OT1/cmtt/m/n/10 data[][]=[][]parent.frame[][](),[] []plot[][]=[][]TRUE[][]
+,[] []border[][]=[][]"red"[][],[] []col[][]=[][]"yellow"[][],[][]horizontal[][]
+=[][]TRUE[][])[][] 
+ []
+
+
+Overfull \hbox (76.73245pt too wide) in paragraph at lines 390--390
+[][]\OT1/cmtt/m/n/10 par[][]([][]mfrow[][]=[][]c[][]([][]1[][],[][]2[][]))[] []
+\OT1/cmtt/m/it/10 # Divide la ventana grafica en dos partes (1 fila, 2 columnas
+)[][] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 391--391
+[][]\OT1/cmtt/m/n/10 mtext[][]([][]side[][]=[][]3[][],[] []line[][]=[][]0[][],[
+] []cex[][]=[][]2[][],[] []outer[][]=T,[] []"Titulo para Toda la Pagina"[][])[]
+[] 
+ []
+
+<figure/unnamed-chunk-1-6.pdf, id=63, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-6.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-6.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-6.pdf used on input line 394.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 394--395
+[][] 
+ []
+
+[10 <./figure/unnamed-chunk-1-5.pdf>]
+Missing character: There is no í in font cmitt10!
+Missing character: There is no ó in font cmitt10!
+
+Overfull \hbox (3.2331pt too wide) in paragraph at lines 399--399
+[][]\OT1/cmtt/m/it/10 # Calcula la moda, ya que el R no proporciona una funcin 
+para eso.[][] 
+ []
+
+
+Overfull \hbox (90.7462pt too wide) in paragraph at lines 402--402
+[][]\OT1/cmtt/m/n/10 if[][](i[] []>[] []1[][]) moda[] []<-[] []limites[i][][]+[
+][]((fi[i][][]-[][]fi[i[][]-[][]1[][]])[][]/[][]((fi[i][][]-[][]fi[i[][]-[][]1[
+][]])[][]+[][](fi[i][][]-[][]fi[i[][]+[][]1[][]]) ))[][]*[][]a[][] 
+ []
+
+Missing character: There is no á in font cmitt10!
+Missing character: There is no á in font cmitt10!
+
+Overfull \hbox (71.4825pt too wide) in paragraph at lines 411--411
+[][]\OT1/cmtt/m/n/10 par[][]([][]mfrow[][]=[][]c[][]([][]1[][],[][]2[][]))[] []
+\OT1/cmtt/m/it/10 # Divide la ventana grfica en dos partes (1 fila, 2 columnas)
+[][] 
+ []
+
+Missing character: There is no á in font cmtt10!
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 412--412
+[][]\OT1/cmtt/m/n/10 mtext[][]([][]side[][]=[][]3[][],[] []line[][]=[][]0[][],[
+] []cex[][]=[][]2[][],[] []outer[][]=T,[] []"Titulo para Toda la Pgina"[][])[][
+] 
+ []
+
+<figure/unnamed-chunk-1-7.pdf, id=73, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-7.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-7.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-7.pdf used on input line 415.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 415--416
+[][] 
+ []
+
+[11 <./figure/unnamed-chunk-1-6.pdf>]
+<figure/unnamed-chunk-1-8.pdf, id=83, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-8.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-1-8.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-8.pdf used on input line 420.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 420--421
+[][] 
+ []
+
+[12 <./figure/unnamed-chunk-1-7.pdf>] [13 <./figure/unnamed-chunk-1-8.pdf>]
+(Guia_8.aux) ) 
+Here is how much of TeX's memory you used:
+ 1302 strings out of 493673
+ 17991 string characters out of 3141533
+ 102102 words of memory out of 3000000
+ 4673 multiletter control sequences out of 15000+200000
+ 3976 words of font info for 16 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,5n,19p,1311b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmitt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
+0.pfb>
+Output written on Guia_8.pdf (13 pages, 103696 bytes).
+PDF statistics:
+ 117 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

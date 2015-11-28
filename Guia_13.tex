@@ -1,0 +1,178 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# GUIA 13}
+
+\hlstd{moneda} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"C"}\hlstd{,} \hlstr{"+"}\hlstd{); moneda}
+\end{alltt}
+\begin{verbatim}
+## [1] "C" "+"
+\end{verbatim}
+\begin{alltt}
+\hlstd{n} \hlkwb{<-} \hlnum{10}\hlstd{; n}
+\end{alltt}
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+\begin{alltt}
+\hlstd{espacio} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{54}\hlstd{;espacio}
+\end{alltt}
+\begin{verbatim}
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+## [24] 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+## [47] 47 48 49 50 51 52 53 54
+\end{verbatim}
+\begin{alltt}
+\hlstd{n} \hlkwb{<-} \hlnum{6}\hlstd{; n}
+\end{alltt}
+\begin{verbatim}
+## [1] 6
+\end{verbatim}
+\begin{alltt}
+\hlstd{muestra} \hlkwb{<-} \hlkwd{sample}\hlstd{(espacio, n); muestra}
+\end{alltt}
+\begin{verbatim}
+## [1] 30 13  3 34 39 35
+\end{verbatim}
+\begin{alltt}
+\hlstd{espacio} \hlkwb{=} \hlkwd{as.vector}\hlstd{(}\hlkwd{outer}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{6}\hlstd{,} \hlnum{1}\hlopt{:}\hlnum{6}\hlstd{, paste)); espacio}
+\end{alltt}
+\begin{verbatim}
+##  [1] "1 1" "2 1" "3 1" "4 1" "5 1" "6 1" "1 2" "2 2" "3 2" "4 2" "5 2"
+## [12] "6 2" "1 3" "2 3" "3 3" "4 3" "5 3" "6 3" "1 4" "2 4" "3 4" "4 4"
+## [23] "5 4" "6 4" "1 5" "2 5" "3 5" "4 5" "5 5" "6 5" "1 6" "2 6" "3 6"
+## [34] "4 6" "5 6" "6 6"
+\end{verbatim}
+\begin{alltt}
+\hlstd{n} \hlkwb{<-} \hlnum{4}\hlstd{; n}
+\end{alltt}
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+\begin{alltt}
+\hlstd{muestra} \hlkwb{<-} \hlkwd{sample}\hlstd{(espacio, n,} \hlkwc{replace}\hlstd{=}\hlnum{TRUE}\hlstd{); muestra}
+\end{alltt}
+\begin{verbatim}
+## [1] "4 1" "5 4" "4 2" "3 5"
+\end{verbatim}
+\begin{alltt}
+\hlcom{#genera el espacio muestral de las 52 cartas}
+\hlstd{naipe} \hlkwb{=} \hlkwd{paste}\hlstd{(}\hlkwd{rep}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"A"}\hlstd{,} \hlnum{2}\hlopt{:}\hlnum{10}\hlstd{,} \hlstr{"J"}\hlstd{,} \hlstr{"Q"}\hlstd{,} \hlstr{"K"}\hlstd{),} \hlnum{4}\hlstd{),} \hlkwd{c}\hlstd{(}\hlstr{"OROS"}\hlstd{,}\hlstr{"COPAS"}\hlstd{,} \hlstr{"BASTOS"}\hlstd{,}\hlstr{"ESPADAS"}\hlstd{));naipe}
+\end{alltt}
+\begin{verbatim}
+##  [1] "A OROS"     "2 COPAS"    "3 BASTOS"   "4 ESPADAS"  "5 OROS"    
+##  [6] "6 COPAS"    "7 BASTOS"   "8 ESPADAS"  "9 OROS"     "10 COPAS"  
+## [11] "J BASTOS"   "Q ESPADAS"  "K OROS"     "A COPAS"    "2 BASTOS"  
+## [16] "3 ESPADAS"  "4 OROS"     "5 COPAS"    "6 BASTOS"   "7 ESPADAS" 
+## [21] "8 OROS"     "9 COPAS"    "10 BASTOS"  "J ESPADAS"  "Q OROS"    
+## [26] "K COPAS"    "A BASTOS"   "2 ESPADAS"  "3 OROS"     "4 COPAS"   
+## [31] "5 BASTOS"   "6 ESPADAS"  "7 OROS"     "8 COPAS"    "9 BASTOS"  
+## [36] "10 ESPADAS" "J OROS"     "Q COPAS"    "K BASTOS"   "A ESPADAS" 
+## [41] "2 OROS"     "3 COPAS"    "4 BASTOS"   "5 ESPADAS"  "6 OROS"    
+## [46] "7 COPAS"    "8 BASTOS"   "9 ESPADAS"  "10 OROS"    "J COPAS"   
+## [51] "Q BASTOS"   "K ESPADAS"
+\end{verbatim}
+\begin{alltt}
+\hlstd{n} \hlkwb{<-} \hlnum{5}\hlstd{; n}
+\end{alltt}
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+\begin{alltt}
+\hlcom{# se obtiene la muestra sin reemplazo (aunque no se especifique con replace=FALSE)}
+\hlstd{cartas} \hlkwb{<-} \hlkwd{sample}\hlstd{(naipe, n) ; cartas}
+\end{alltt}
+\begin{verbatim}
+## [1] "7 OROS"    "9 BASTOS"  "9 ESPADAS" "4 BASTOS"  "6 BASTOS"
+\end{verbatim}
+\begin{alltt}
+\hlstd{espacio} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{num}\hlstd{)}
+\hlstd{\{}
+\hlstd{numDiv7} \hlkwb{<-} \hlkwd{numeric}\hlstd{(}\hlnum{0}\hlstd{)}
+\hlstd{ind} \hlkwb{<-} \hlnum{0}
+\hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(num))}
+\hlkwa{if} \hlstd{((num[i]} \hlopt{%%} \hlnum{7}\hlstd{)}\hlopt{==}\hlnum{0}\hlstd{)}
+\hlstd{\{}
+\hlstd{ind} \hlkwb{<-} \hlstd{ind}\hlopt{+}\hlnum{1}
+\hlstd{numDiv7[ind]}\hlkwb{=}\hlstd{num[i]}
+\hlstd{\}}
+\hlkwd{return}\hlstd{(numDiv7)}
+\hlstd{\}}
+\hlstd{numeros} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{500}
+
+\hlcom{# generando el espacio muestral}
+\hlstd{s} \hlkwb{<-} \hlkwd{espacio}\hlstd{(numeros); s}
+\end{alltt}
+\begin{verbatim}
+##  [1]   7  14  21  28  35  42  49  56  63  70  77  84  91  98 105 112 119
+## [18] 126 133 140 147 154 161 168 175 182 189 196 203 210 217 224 231 238
+## [35] 245 252 259 266 273 280 287 294 301 308 315 322 329 336 343 350 357
+## [52] 364 371 378 385 392 399 406 413 420 427 434 441 448 455 462 469 476
+## [69] 483 490 497
+\end{verbatim}
+\begin{alltt}
+\hlcom{# seleccionando la muestra}
+\hlstd{muestra} \hlkwb{<-} \hlkwd{sample}\hlstd{(s,} \hlnum{12}\hlstd{,} \hlkwc{replace}\hlstd{=}\hlnum{TRUE}\hlstd{); muestra}
+\end{alltt}
+\begin{verbatim}
+##  [1] 371 343  63  91 126  42 294 189 392 273 455 294
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

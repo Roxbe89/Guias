@@ -1,0 +1,229 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 23}
+
+\hlcom{#PRUEBAS SOBRE DOS MUESTRAS INDEPENDIENTES}
+\hlstd{IMC_Control} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{23.6}\hlstd{,} \hlnum{22.7}\hlstd{,} \hlnum{21.2}\hlstd{,} \hlnum{21.7}\hlstd{,} \hlnum{20.7}\hlstd{,} \hlnum{22.0}\hlstd{,} \hlnum{21.8}\hlstd{,} \hlnum{24.2}\hlstd{,}
+                 \hlnum{20.1}\hlstd{,}
+                 \hlnum{21.3}\hlstd{,} \hlnum{20.5}\hlstd{,} \hlnum{21.1}\hlstd{,} \hlnum{21.4}\hlstd{,} \hlnum{22.2}\hlstd{,} \hlnum{22.6}\hlstd{,}
+                 \hlnum{20.4}\hlstd{,} \hlnum{23.3}\hlstd{,} \hlnum{24.8}\hlstd{)}
+\hlstd{IMC_Pacientes} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{25.6}\hlstd{,} \hlnum{22.7}\hlstd{,} \hlnum{25.9}\hlstd{,} \hlnum{24.3}\hlstd{,} \hlnum{25.2}\hlstd{,} \hlnum{29.6}\hlstd{,} \hlnum{21.3}\hlstd{,} \hlnum{25.5}\hlstd{,}
+                   \hlnum{27.4}\hlstd{,} \hlnum{22.3}\hlstd{,} \hlnum{24.4}\hlstd{,} \hlnum{23.7}\hlstd{,} \hlnum{20.6}\hlstd{,} \hlnum{22.8}\hlstd{)}
+\hlkwd{t.test}\hlstd{(IMC_Control, IMC_Pacientes,} \hlkwc{var.equal}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{mu}\hlstd{=}\hlnum{0}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Two Sample t-test
+## 
+## data:  IMC_Control and IMC_Pacientes
+## t = -3.5785, df = 30, p-value = 0.001198
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -3.770935 -1.030653
+## sample estimates:
+## mean of x mean of y 
+##  21.97778  24.37857
+\end{verbatim}
+\begin{alltt}
+\hlcom{#Se concluye entonces que existe diferencia significativa en el IMC para ambos grupos de pacientes,}
+\hlcom{#pues el p valor de la prueba resulta ser muy pequeño.}
+
+\hlcom{#PRUEBAS SOBRE DOS MUESTRAS PAREADAS}
+\hlstd{PAS.antes} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{160}\hlstd{,}\hlnum{155}\hlstd{,}\hlnum{180}\hlstd{,}\hlnum{140}\hlstd{,}\hlnum{150}\hlstd{,}\hlnum{130}\hlstd{,}\hlnum{190}\hlstd{,}\hlnum{192}\hlstd{,}\hlnum{170}\hlstd{,}\hlnum{165}\hlstd{)}
+\hlstd{PAS.despues} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{139}\hlstd{,}\hlnum{135}\hlstd{,}\hlnum{175}\hlstd{,}\hlnum{120}\hlstd{,}\hlnum{145}\hlstd{,}\hlnum{140}\hlstd{,}\hlnum{170}\hlstd{,}\hlnum{180}\hlstd{,}\hlnum{149}\hlstd{,}\hlnum{146}\hlstd{)}
+\hlkwd{shapiro.test}\hlstd{(PAS.antes)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  PAS.antes
+## W = 0.97021, p-value = 0.8928
+\end{verbatim}
+\begin{alltt}
+\hlkwd{shapiro.test}\hlstd{(PAS.despues)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  PAS.despues
+## W = 0.92548, p-value = 0.4049
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ks.test}\hlstd{(PAS.antes,}\hlstr{"pnorm"}\hlstd{,}\hlkwc{mean}\hlstd{=}\hlkwd{mean}\hlstd{(PAS.antes),}\hlkwc{sd}\hlstd{=}\hlkwd{sd}\hlstd{(PAS.antes))}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	One-sample Kolmogorov-Smirnov test
+## 
+## data:  PAS.antes
+## D = 0.10476, p-value = 0.9992
+## alternative hypothesis: two-sided
+\end{verbatim}
+\begin{alltt}
+\hlkwd{ks.test}\hlstd{(PAS.despues,}\hlstr{"pnorm"}\hlstd{,}\hlkwc{mean}\hlstd{=}\hlkwd{mean}\hlstd{(PAS.despues),}\hlkwc{sd}\hlstd{=}\hlkwd{sd}\hlstd{(PAS.despues))}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	One-sample Kolmogorov-Smirnov test
+## 
+## data:  PAS.despues
+## D = 0.21871, p-value = 0.6495
+## alternative hypothesis: two-sided
+\end{verbatim}
+\begin{alltt}
+\hlkwd{t.test}\hlstd{(PAS.antes, PAS.despues,} \hlkwc{paired}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{mu}\hlstd{=}\hlnum{0}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Paired t-test
+## 
+## data:  PAS.antes and PAS.despues
+## t = 4.0552, df = 9, p-value = 0.002862
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   5.880722 20.719278
+## sample estimates:
+## mean of the differences 
+##                    13.3
+\end{verbatim}
+\begin{alltt}
+\hlcom{#El valor del estadístico t es 4.0552, con gl = 9, P = 0.0029. Con estos resultados se rechaza 0 H y por lo}
+\hlcom{#tanto se concluye que la PAS antes y después del tratamiento es distinta, es decir, el tratamiento ha}
+\hlcom{#sido efectivo.}
+
+\hlcom{#PRUEBA DE HIPÓTESIS ACERCA DE LA VARIANZA DE DOS POBLACIONES}
+\hlstd{Agente_A} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{12}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{18}\hlstd{,} \hlnum{16}\hlstd{,} \hlnum{13}\hlstd{)}
+\hlstd{Agente_B} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{14}\hlstd{,} \hlnum{18}\hlstd{,} \hlnum{18}\hlstd{,} \hlnum{17}\hlstd{,} \hlnum{16}\hlstd{)}
+\hlkwd{var.test}\hlstd{(Agente_A, Agente_B)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	F test to compare two variances
+## 
+## data:  Agente_A and Agente_B
+## F = 3.0357, num df = 4, denom df = 4, p-value = 0.3075
+## alternative hypothesis: true ratio of variances is not equal to 1
+## 95 percent confidence interval:
+##   0.3160711 29.1566086
+## sample estimates:
+## ratio of variances 
+##           3.035714
+\end{verbatim}
+\begin{alltt}
+\hlcom{#Como el p valor es alto se concluye que las varianzas pueden }
+\hlcom{#considerarse iguales}
+
+
+\hlcom{#EJERCICIO}
+\hlcom{#contraste de la igualdad de varianzas}
+\hlstd{Tabla_A} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{2098}\hlstd{,}\hlnum{2082}\hlstd{,}\hlnum{2246}\hlstd{,}\hlnum{2340}\hlstd{,}\hlnum{2714}\hlstd{,}\hlnum{2777}\hlstd{,}\hlnum{2625}\hlstd{,}\hlnum{2388}\hlstd{,}\hlnum{2766}\hlstd{,}
+             \hlnum{3112}\hlstd{,}\hlnum{3030}\hlstd{,}\hlnum{3375}\hlstd{,}\hlnum{3038}\hlstd{,}\hlnum{3017}\hlstd{,}\hlnum{3136}\hlstd{,}\hlnum{3204}\hlstd{,}\hlnum{3174}\hlstd{,}\hlnum{3220}\hlstd{,}
+             \hlnum{3464}\hlstd{,}\hlnum{3870}\hlstd{,}\hlnum{3689}\hlstd{,}\hlnum{3783}\hlstd{,}\hlnum{3457}\hlstd{,}\hlnum{4151}\hlstd{,}\hlnum{4230}\hlstd{,}\hlnum{3707}\hlstd{,}\hlnum{4158}\hlstd{,}
+             \hlnum{4315}\hlstd{,}\hlnum{4790}\hlstd{,}\hlnum{4464}\hlstd{,}\hlnum{4499}\hlstd{,}\hlnum{4819}\hlstd{,}\hlnum{4739}\hlstd{,}\hlnum{4912}\hlstd{,}\hlnum{4494}\hlstd{,}\hlnum{5698}\hlstd{,}
+             \hlnum{6349}\hlstd{,}\hlnum{6630}\hlstd{,}\hlnum{7585}\hlstd{,}\hlnum{8183}\hlstd{)}
+\hlstd{Tabla_B}\hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1209}\hlstd{,}\hlnum{1115}\hlstd{,}\hlnum{1151}\hlstd{,}\hlnum{1208}\hlstd{,}\hlnum{1170}\hlstd{,}\hlnum{1198}\hlstd{,}\hlnum{1390}\hlstd{,}\hlnum{1480}\hlstd{,}\hlnum{1359}\hlstd{,}\hlnum{1337}\hlstd{,}
+            \hlnum{1415}\hlstd{,}\hlnum{1530}\hlstd{,}\hlnum{1453}\hlstd{,}\hlnum{1324}\hlstd{,}\hlnum{1477}\hlstd{,}\hlnum{1501}\hlstd{,}\hlnum{1661}\hlstd{,}\hlnum{1562}\hlstd{,}\hlnum{1764}\hlstd{,}\hlnum{1796}\hlstd{,}
+            \hlnum{1976}\hlstd{,}\hlnum{1802}\hlstd{,}\hlnum{2000}\hlstd{,}\hlnum{1923}\hlstd{,}\hlnum{2097}\hlstd{,}\hlnum{2110}\hlstd{,}\hlnum{2214}\hlstd{,}\hlnum{2069}\hlstd{,}\hlnum{2324}\hlstd{,}\hlnum{2309}\hlstd{,}
+            \hlnum{2353}\hlstd{,}\hlnum{2091}\hlstd{,}\hlnum{2187}\hlstd{,}\hlnum{2399}\hlstd{,}\hlnum{2630}\hlstd{,}\hlnum{2722}\hlstd{,}\hlnum{2998}\hlstd{,}\hlnum{3392}\hlstd{,}\hlnum{3379}\hlstd{,}\hlnum{3627}\hlstd{)}
+\hlkwd{var.test}\hlstd{(Tabla_A, Tabla_B)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	F test to compare two variances
+## 
+## data:  Tabla_A and Tabla_B
+## F = 4.7412, num df = 39, denom df = 39, p-value = 3.937e-06
+## alternative hypothesis: true ratio of variances is not equal to 1
+## 95 percent confidence interval:
+##  2.507604 8.964228
+## sample estimates:
+## ratio of variances 
+##           4.741174
+\end{verbatim}
+\begin{alltt}
+\hlcom{#Como el p valor es bajo se concluye que las varianzas pueden }
+\hlcom{#considerarse distintas}
+
+\hlcom{#contraste de igualdad de medias.}
+\hlkwd{t.test}\hlstd{(Tabla_A, Tabla_B,} \hlkwc{var.equal}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{mu}\hlstd{=}\hlnum{0}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## 
+## 	Two Sample t-test
+## 
+## data:  Tabla_A and Tabla_B
+## t = 8.0534, df = 78, p-value = 7.417e-12
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  1498.548 2482.752
+## sample estimates:
+## mean of x mean of y 
+##   3908.20   1917.55
+\end{verbatim}
+\begin{alltt}
+\hlcom{#Se concluye que existe diferencia significativa en }
+\hlcom{#la densidad espectral para ambos grupos de pacientes,}
+\hlcom{#pues el p valor de la prueba resulta ser muy pequeño.}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

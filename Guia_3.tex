@@ -1,0 +1,475 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 3}
+
+\hlstd{sexo} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"M"}\hlstd{,} \hlstr{"F"}\hlstd{,} \hlstr{"F"}\hlstd{,} \hlstr{"M"}\hlstd{,} \hlstr{"F"}\hlstd{,} \hlstr{"F"}\hlstd{,} \hlstr{"M"}\hlstd{); sexo}
+\end{alltt}
+\begin{verbatim}
+## [1] "M" "F" "F" "M" "F" "F" "M"
+\end{verbatim}
+\begin{alltt}
+\hlstd{edad} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{19}\hlstd{,} \hlnum{20}\hlstd{,} \hlnum{19}\hlstd{,} \hlnum{22}\hlstd{,} \hlnum{20}\hlstd{,} \hlnum{21}\hlstd{,} \hlnum{19}\hlstd{); edad}
+\end{alltt}
+\begin{verbatim}
+## [1] 19 20 19 22 20 21 19
+\end{verbatim}
+\begin{alltt}
+\hlstd{FactorSexo} \hlkwb{=} \hlkwd{factor}\hlstd{(sexo); FactorSexo}
+\end{alltt}
+\begin{verbatim}
+## [1] M F F M F F M
+## Levels: F M
+\end{verbatim}
+\begin{alltt}
+\hlkwd{levels}\hlstd{(FactorSexo)}
+\end{alltt}
+\begin{verbatim}
+## [1] "F" "M"
+\end{verbatim}
+\begin{alltt}
+\hlstd{mediaEdad} \hlkwb{<-} \hlkwd{tapply}\hlstd{(edad, FactorSexo, mean); mediaEdad}
+\end{alltt}
+\begin{verbatim}
+##  F  M 
+## 20 20
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.vector}\hlstd{(mediaEdad)}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.matrix}\hlstd{(mediaEdad)}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.list}\hlstd{(mediaEdad)}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.table}\hlstd{(mediaEdad)}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.array}\hlstd{(mediaEdad)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1}\hlkwb{<-}\hlkwd{list}\hlstd{(}\hlkwc{padre}\hlstd{=}\hlstr{"Pedro"}\hlstd{,} \hlkwc{madre}\hlstd{=}\hlstr{"María"}\hlstd{,} \hlkwc{no.hijos}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{edad.hijos}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{4}\hlstd{,}\hlnum{7}\hlstd{,}\hlnum{9}\hlstd{));lista1}
+\end{alltt}
+\begin{verbatim}
+## $padre
+## [1] "Pedro"
+## 
+## $madre
+## [1] "María"
+## 
+## $no.hijos
+## [1] 3
+## 
+## $edad.hijos
+## [1] 4 7 9
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.matrix}\hlstd{(lista1)}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.vector}\hlstd{(lista1}\hlopt{$}\hlstd{edad.hijos)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[}\hlnum{1}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## $padre
+## [1] "Pedro"
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[}\hlnum{2}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## $madre
+## [1] "María"
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[}\hlnum{4}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## $edad.hijos
+## [1] 4 7 9
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[[}\hlnum{2}\hlstd{]]}
+\end{alltt}
+\begin{verbatim}
+## [1] "María"
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[}\hlstr{"padre"}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## $padre
+## [1] "Pedro"
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[}\hlstr{"madre"}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## $madre
+## [1] "María"
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[[}\hlnum{4}\hlstd{]][}\hlnum{2}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 7
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1}\hlopt{$}\hlstd{padre}
+\end{alltt}
+\begin{verbatim}
+## [1] "Pedro"
+\end{verbatim}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlstr{"nombre"}\hlstd{; lista1[x]}
+\end{alltt}
+\begin{verbatim}
+## $<NA>
+## NULL
+\end{verbatim}
+\begin{alltt}
+\hlstd{subLista} \hlkwb{<-} \hlstd{lista1[}\hlnum{4}\hlstd{]; subLista}
+\end{alltt}
+\begin{verbatim}
+## $edad.hijos
+## [1] 4 7 9
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1[}\hlnum{5}\hlstd{]} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlkwc{sexo.hijos}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"F"}\hlstd{,} \hlstr{"M"}\hlstd{,} \hlstr{"F"}\hlstd{)); lista1}
+\end{alltt}
+\begin{verbatim}
+## $padre
+## [1] "Pedro"
+## 
+## $madre
+## [1] "María"
+## 
+## $no.hijos
+## [1] 3
+## 
+## $edad.hijos
+## [1] 4 7 9
+## 
+## [[5]]
+## [1] "F" "M" "F"
+\end{verbatim}
+\begin{alltt}
+\hlstd{lista1} \hlkwb{<-} \hlkwd{edit}\hlstd{(lista1)}
+\hlstd{lista1[}\hlnum{5}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [[1]]
+## [1] "F" "M" "F"
+\end{verbatim}
+\begin{alltt}
+\hlstd{S} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{3}\hlstd{,} \hlopt{-}\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{),} \hlopt{-}\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{),} \hlnum{2}\hlstd{),} \hlkwc{nrow}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{2}\hlstd{); S}
+\end{alltt}
+\begin{verbatim}
+##           [,1]      [,2]
+## [1,]  3.000000 -1.414214
+## [2,] -1.414214  2.000000
+\end{verbatim}
+\begin{alltt}
+\hlstd{autovS} \hlkwb{<-} \hlkwd{eigen}\hlstd{(S); autovS}
+\end{alltt}
+\begin{verbatim}
+## $values
+## [1] 4 1
+## 
+## $vectors
+##            [,1]       [,2]
+## [1,] -0.8164966 -0.5773503
+## [2,]  0.5773503 -0.8164966
+\end{verbatim}
+\begin{alltt}
+\hlstd{evals} \hlkwb{<-} \hlkwd{eigen}\hlstd{(S)}\hlopt{$}\hlstd{values; evals}
+\end{alltt}
+\begin{verbatim}
+## [1] 4 1
+\end{verbatim}
+\begin{alltt}
+\hlstd{Notas} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{7}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{9}\hlstd{,} \hlnum{10}\hlstd{),} \hlkwc{ncol}\hlstd{=}\hlnum{3}\hlstd{,}\hlkwc{dimnames}\hlstd{=}\hlkwd{list}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"Matemática"}\hlstd{,}\hlstr{"Álgebra"}\hlstd{,}\hlstr{"Geometría"}\hlstd{),}\hlkwd{c}\hlstd{(}\hlstr{"Juan"}\hlstd{,}\hlstr{"José"}\hlstd{,}\hlstr{"René"}\hlstd{))); Notas}
+\end{alltt}
+\begin{verbatim}
+##            Juan José René
+## Matemática    2    6    4
+## Álgebra       5    8    9
+## Geometría     7    2   10
+\end{verbatim}
+\begin{alltt}
+\hlstd{log} \hlkwb{<-} \hlkwd{sample}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{TRUE}\hlstd{,} \hlnum{FALSE}\hlstd{),} \hlkwc{size} \hlstd{=} \hlnum{20}\hlstd{,} \hlkwc{replace} \hlstd{= T); log}
+\end{alltt}
+\begin{verbatim}
+##  [1] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+## [12]  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{comp} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{20}\hlstd{)} \hlopt{+} \hlkwd{runif}\hlstd{(}\hlnum{20}\hlstd{)} \hlopt{*} \hlstd{(}\hlnum{1i}\hlstd{); comp}
+\end{alltt}
+\begin{verbatim}
+##  [1]  0.96398260+0.96292141i  0.21267302+0.70884088i
+##  [3]  0.21952928+0.85813813i  0.88441842+0.87966848i
+##  [5]  0.54086888+0.32261623i -0.41659964+0.32306315i
+##  [7] -0.07170685+0.11650594i  0.03328457+0.54362654i
+##  [9] -0.40288589+0.35509025i  0.36660605+0.12420057i
+## [11] -0.13841294+0.69810787i -0.00960619+0.02173094i
+## [13] -0.80550798+0.64124942i -1.57741583+0.00784983i
+## [15]  0.87827195+0.57774310i -0.50831634+0.39745094i
+## [17]  1.41993848+0.10024773i  0.66584132+0.74769157i
+## [19]  1.77523557+0.70659749i -0.60903305+0.78768565i
+\end{verbatim}
+\begin{alltt}
+\hlstd{num} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{20}\hlstd{,} \hlkwc{mean}\hlstd{=}\hlnum{0}\hlstd{,} \hlkwc{sd}\hlstd{=}\hlnum{1}\hlstd{); num}
+\end{alltt}
+\begin{verbatim}
+##  [1]  1.1919050  0.8734501 -2.4452087  0.6334359 -0.7709603 -0.8252430
+##  [7]  0.9281459 -1.3015194 -0.8678214 -1.0852498 -1.2272123 -0.1346940
+## [13] -0.5525445 -0.4815168 -0.9144788 -0.4132464 -0.3901678  0.0797854
+## [19] -0.5985619  1.6729334
+\end{verbatim}
+\begin{alltt}
+\hlstd{df1} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(log, comp, num); df1}
+\end{alltt}
+\begin{verbatim}
+##      log                    comp        num
+## 1  FALSE  0.96398260+0.96292141i  1.1919050
+## 2  FALSE  0.21267302+0.70884088i  0.8734501
+## 3   TRUE  0.21952928+0.85813813i -2.4452087
+## 4  FALSE  0.88441842+0.87966848i  0.6334359
+## 5  FALSE  0.54086888+0.32261623i -0.7709603
+## 6  FALSE -0.41659964+0.32306315i -0.8252430
+## 7   TRUE -0.07170685+0.11650594i  0.9281459
+## 8  FALSE  0.03328457+0.54362654i -1.3015194
+## 9  FALSE -0.40288589+0.35509025i -0.8678214
+## 10 FALSE  0.36660605+0.12420057i -1.0852498
+## 11 FALSE -0.13841294+0.69810787i -1.2272123
+## 12  TRUE -0.00960619+0.02173094i -0.1346940
+## 13 FALSE -0.80550798+0.64124942i -0.5525445
+## 14 FALSE -1.57741583+0.00784983i -0.4815168
+## 15 FALSE  0.87827195+0.57774310i -0.9144788
+## 16 FALSE -0.50831634+0.39745094i -0.4132464
+## 17 FALSE  1.41993848+0.10024773i -0.3901678
+## 18  TRUE  0.66584132+0.74769157i  0.0797854
+## 19 FALSE  1.77523557+0.70659749i -0.5985619
+## 20  TRUE -0.60903305+0.78768565i  1.6729334
+\end{verbatim}
+\begin{alltt}
+\hlstd{nombres} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"logico"}\hlstd{,} \hlstr{"complejo"}\hlstd{,} \hlstr{"numerico"}\hlstd{)}
+\hlkwd{names}\hlstd{(df1)} \hlkwb{<-} \hlstd{nombres; df1}
+\end{alltt}
+\begin{verbatim}
+##    logico                complejo   numerico
+## 1   FALSE  0.96398260+0.96292141i  1.1919050
+## 2   FALSE  0.21267302+0.70884088i  0.8734501
+## 3    TRUE  0.21952928+0.85813813i -2.4452087
+## 4   FALSE  0.88441842+0.87966848i  0.6334359
+## 5   FALSE  0.54086888+0.32261623i -0.7709603
+## 6   FALSE -0.41659964+0.32306315i -0.8252430
+## 7    TRUE -0.07170685+0.11650594i  0.9281459
+## 8   FALSE  0.03328457+0.54362654i -1.3015194
+## 9   FALSE -0.40288589+0.35509025i -0.8678214
+## 10  FALSE  0.36660605+0.12420057i -1.0852498
+## 11  FALSE -0.13841294+0.69810787i -1.2272123
+## 12   TRUE -0.00960619+0.02173094i -0.1346940
+## 13  FALSE -0.80550798+0.64124942i -0.5525445
+## 14  FALSE -1.57741583+0.00784983i -0.4815168
+## 15  FALSE  0.87827195+0.57774310i -0.9144788
+## 16  FALSE -0.50831634+0.39745094i -0.4132464
+## 17  FALSE  1.41993848+0.10024773i -0.3901678
+## 18   TRUE  0.66584132+0.74769157i  0.0797854
+## 19  FALSE  1.77523557+0.70659749i -0.5985619
+## 20   TRUE -0.60903305+0.78768565i  1.6729334
+\end{verbatim}
+\begin{alltt}
+\hlkwd{row.names}\hlstd{(df1)} \hlkwb{<-} \hlstd{letters[}\hlnum{1}\hlopt{:}\hlnum{20}\hlstd{]; df1}
+\end{alltt}
+\begin{verbatim}
+##   logico                complejo   numerico
+## a  FALSE  0.96398260+0.96292141i  1.1919050
+## b  FALSE  0.21267302+0.70884088i  0.8734501
+## c   TRUE  0.21952928+0.85813813i -2.4452087
+## d  FALSE  0.88441842+0.87966848i  0.6334359
+## e  FALSE  0.54086888+0.32261623i -0.7709603
+## f  FALSE -0.41659964+0.32306315i -0.8252430
+## g   TRUE -0.07170685+0.11650594i  0.9281459
+## h  FALSE  0.03328457+0.54362654i -1.3015194
+## i  FALSE -0.40288589+0.35509025i -0.8678214
+## j  FALSE  0.36660605+0.12420057i -1.0852498
+## k  FALSE -0.13841294+0.69810787i -1.2272123
+## l   TRUE -0.00960619+0.02173094i -0.1346940
+## m  FALSE -0.80550798+0.64124942i -0.5525445
+## n  FALSE -1.57741583+0.00784983i -0.4815168
+## o  FALSE  0.87827195+0.57774310i -0.9144788
+## p  FALSE -0.50831634+0.39745094i -0.4132464
+## q  FALSE  1.41993848+0.10024773i -0.3901678
+## r   TRUE  0.66584132+0.74769157i  0.0797854
+## s  FALSE  1.77523557+0.70659749i -0.5985619
+## t   TRUE -0.60903305+0.78768565i  1.6729334
+\end{verbatim}
+\begin{alltt}
+\hlstd{edad} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{18}\hlstd{,} \hlnum{21}\hlstd{,} \hlnum{45}\hlstd{,} \hlnum{54}\hlstd{); edad}
+\end{alltt}
+\begin{verbatim}
+## [1] 18 21 45 54
+\end{verbatim}
+\begin{alltt}
+\hlstd{datos} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{150}\hlstd{,} \hlnum{160}\hlstd{,} \hlnum{180}\hlstd{,} \hlnum{205}\hlstd{,} \hlnum{65}\hlstd{,} \hlnum{68}\hlstd{,} \hlnum{65}\hlstd{,} \hlnum{69}\hlstd{),} \hlkwc{ncol}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{dimnames}\hlstd{=}\hlkwd{list}\hlstd{(}\hlkwd{c}\hlstd{(),}\hlkwd{c}\hlstd{(}\hlstr{"Estatura"}\hlstd{,}\hlstr{"Peso"}\hlstd{))); datos}
+\end{alltt}
+\begin{verbatim}
+##      Estatura Peso
+## [1,]      150   65
+## [2,]      160   68
+## [3,]      180   65
+## [4,]      205   69
+\end{verbatim}
+\begin{alltt}
+\hlstd{sexo} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"F"}\hlstd{,} \hlstr{"M"}\hlstd{,} \hlstr{"M"}\hlstd{,} \hlstr{"M"}\hlstd{); sexo}
+\end{alltt}
+\begin{verbatim}
+## [1] "F" "M" "M" "M"
+\end{verbatim}
+\begin{alltt}
+\hlstd{hoja1} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{Edad}\hlstd{=edad, datos,} \hlkwc{Sexo}\hlstd{=sexo); hoja1}
+\end{alltt}
+\begin{verbatim}
+##   Edad Estatura Peso Sexo
+## 1   18      150   65    F
+## 2   21      160   68    M
+## 3   45      180   65    M
+## 4   54      205   69    M
+\end{verbatim}
+\begin{alltt}
+\hlkwd{as.data.frame}\hlstd{(hoja1)}
+\end{alltt}
+\begin{verbatim}
+##   Edad Estatura Peso Sexo
+## 1   18      150   65    F
+## 2   21      160   68    M
+## 3   45      180   65    M
+## 4   54      205   69    M
+\end{verbatim}
+\begin{alltt}
+\hlkwd{search}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+##  [1] ".GlobalEnv"        "package:knitr"     "package:stats"    
+##  [4] "package:graphics"  "package:grDevices" "package:utils"    
+##  [7] "package:datasets"  "package:methods"   "Autoloads"        
+## [10] "package:base"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{attach}\hlstd{(hoja1)}
+\hlkwd{search}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+##  [1] ".GlobalEnv"        "hoja1"             "package:knitr"    
+##  [4] "package:stats"     "package:graphics"  "package:grDevices"
+##  [7] "package:utils"     "package:datasets"  "package:methods"  
+## [10] "Autoloads"         "package:base"
+\end{verbatim}
+\begin{alltt}
+\hlstd{Edad}
+\end{alltt}
+\begin{verbatim}
+## [1] 18 21 45 54
+\end{verbatim}
+\begin{alltt}
+\hlstd{hoja1}\hlopt{$}\hlstd{Peso} \hlkwb{<-} \hlstd{Peso}\hlopt{+}\hlnum{1}\hlstd{; hoja1}
+\end{alltt}
+\begin{verbatim}
+##   Edad Estatura Peso Sexo
+## 1   18      150   66    F
+## 2   21      160   69    M
+## 3   45      180   66    M
+## 4   54      205   70    M
+\end{verbatim}
+\begin{alltt}
+\hlstd{Edad}
+\end{alltt}
+\begin{verbatim}
+## [1] 18 21 45 54
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

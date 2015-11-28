@@ -1,0 +1,139 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 4}
+
+\hlstd{Entrada1} \hlkwb{<-} \hlkwd{read.table}\hlstd{(}\hlstr{"datos01.txt"}\hlstd{,} \hlkwc{header}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in read.table("{}datos01.txt"{}, header = TRUE): incomplete final line found by readTableHeader on 'datos01.txt'}}\begin{alltt}
+\hlstd{Entrada1}
+\end{alltt}
+\begin{verbatim}
+##   Edad Estatura Peso sexo
+## 1   26     1.65  146    F
+## 2   21     1.73  158    M
+## 3   21     1.81  167    M
+## 4   20     1.70  152    F
+\end{verbatim}
+\begin{alltt}
+\hlstd{Edat1} \hlkwb{<-} \hlkwd{scan}\hlstd{(}\hlstr{"datos01.txt"}\hlstd{,} \hlkwd{list}\hlstd{(}\hlkwc{X1}\hlstd{=}\hlnum{0}\hlstd{,} \hlkwc{X2}\hlstd{=}\hlnum{0}\hlstd{),} \hlkwc{skip} \hlstd{=} \hlnum{1}\hlstd{,} \hlkwc{flush} \hlstd{=} \hlnum{TRUE}\hlstd{,} \hlkwc{quiet} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\hlstd{Edat1}
+\end{alltt}
+\begin{verbatim}
+## $X1
+## [1] 26 21 21 20
+## 
+## $X2
+## [1] 1.65 1.73 1.81 1.70
+\end{verbatim}
+\begin{alltt}
+\hlstd{pp} \hlkwb{<-} \hlkwd{scan}\hlstd{(}\hlstr{"datos02.txt"}\hlstd{,} \hlkwc{skip} \hlstd{=} \hlnum{1}\hlstd{,} \hlkwc{quiet}\hlstd{=} \hlnum{TRUE}\hlstd{)}
+\hlstd{pp}
+\end{alltt}
+\begin{verbatim}
+## [1]  2  3  5  7 11 13 17
+\end{verbatim}
+\begin{alltt}
+\hlkwd{library}\hlstd{(foreign)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'foreign' was built under R version 3.2.2}}\begin{alltt}
+\hlstd{baseproductos} \hlkwb{<-}\hlkwd{read.table}\hlstd{(}\hlstr{"productos.csv"}\hlstd{,}\hlkwc{header}\hlstd{=}\hlnum{TRUE}\hlstd{,}\hlkwc{sep} \hlstd{=} \hlstr{","}\hlstd{)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in file(file, "{}rt"{}): no fue posible abrir el archivo 'productos.csv': No such file or directory}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in file(file, "{}rt"{}): no se puede abrir la conexión}}\begin{alltt}
+\hlstd{baseproductos}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): objeto 'baseproductos' no encontrado}}\begin{alltt}
+\hlkwd{library}\hlstd{(Hmisc)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'Hmisc' was built under R version 3.2.2}}
+
+{\ttfamily\noindent\itshape\color{messagecolor}{\#\# Loading required package: grid\\\#\# Loading required package: lattice\\\#\# Loading required package: survival\\\#\# Loading required package: Formula}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'Formula' was built under R version 3.2.2}}
+
+{\ttfamily\noindent\itshape\color{messagecolor}{\#\# Loading required package: ggplot2}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'ggplot2' was built under R version 3.2.2}}
+
+{\ttfamily\noindent\itshape\color{messagecolor}{\#\# \\\#\# Attaching package: 'Hmisc'\\\#\# \\\#\# The following objects are masked from 'package:base':\\\#\# \\\#\#\ \ \ \  format.pval, round.POSIXt, trunc.POSIXt, units}}\begin{alltt}
+\hlstd{Baseimportante}\hlkwb{<-}\hlkwd{spss.get}\hlstd{(}\hlstr{"Mundo.sav"}\hlstd{,}\hlkwc{use.value.labels} \hlstd{=}\hlnum{TRUE}\hlstd{)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in read.spss(file, use.value.labels = use.value.labels, to.data.frame = to.data.frame, : unable to open file: 'No such file or directory'}}\begin{alltt}
+\hlstd{Baseimportante}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): objeto 'Baseimportante' no encontrado}}\end{kframe}
+\end{knitrout}
+@
+
+
+
+\end{document}

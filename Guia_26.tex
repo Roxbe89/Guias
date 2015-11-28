@@ -1,0 +1,144 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 26}
+
+\hlstd{FactorA}\hlkwb{<-}\hlkwd{gl}\hlstd{(}\hlkwc{n}\hlstd{=}\hlnum{4}\hlstd{,}\hlkwc{k}\hlstd{=}\hlnum{8}\hlstd{,}\hlkwc{length} \hlstd{=} \hlnum{32}\hlstd{)}
+\hlstd{FactorA} \hlcom{# Definiendo el vector que contiene el Factor A}
+\end{alltt}
+\begin{verbatim}
+##  [1] 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4
+## Levels: 1 2 3 4
+\end{verbatim}
+\begin{alltt}
+\hlstd{FactorB}\hlkwb{<-}\hlkwd{gl}\hlstd{(}\hlkwc{n}\hlstd{=}\hlnum{4}\hlstd{,}\hlkwc{k}\hlstd{=}\hlnum{2}\hlstd{,}\hlkwc{length} \hlstd{=} \hlnum{32}\hlstd{)}
+\hlstd{FactorB} \hlcom{# Definiendo el vector que contiene los tratamientos de los novillos}
+\end{alltt}
+\begin{verbatim}
+##  [1] 1 1 2 2 3 3 4 4 1 1 2 2 3 3 4 4 1 1 2 2 3 3 4 4 1 1 2 2 3 3 4 4
+## Levels: 1 2 3 4
+\end{verbatim}
+\begin{alltt}
+\hlstd{Porcentaje}\hlkwb{<-}\hlkwd{c}\hlstd{(}\hlnum{1.8}\hlstd{,}\hlnum{2.1}\hlstd{,}\hlnum{2.0}\hlstd{,}\hlnum{2.1}\hlstd{,}\hlnum{4.6}\hlstd{,}\hlnum{5.0}\hlstd{,}\hlnum{7.5}\hlstd{,}\hlnum{7.9}\hlstd{,}\hlnum{2.2}\hlstd{,}\hlnum{2.4}\hlstd{,}\hlnum{4.2}\hlstd{,}\hlnum{4.0}\hlstd{,}
+              \hlnum{5.4}\hlstd{,}\hlnum{5.6}\hlstd{,}\hlnum{9.8}\hlstd{,}\hlnum{9.2}\hlstd{,}\hlnum{2.8}\hlstd{,}\hlnum{3.2}\hlstd{,}\hlnum{4.4}\hlstd{,}\hlnum{4.8}\hlstd{,}\hlnum{8.7}\hlstd{,}\hlnum{8.4}\hlstd{,}\hlnum{13.2}\hlstd{,}\hlnum{13.0}\hlstd{,}
+              \hlnum{3.2}\hlstd{,}\hlnum{3.6}\hlstd{,}\hlnum{3.3}\hlstd{,}\hlnum{3.5}\hlstd{,}\hlnum{5.7}\hlstd{,}\hlnum{5.8}\hlstd{,}\hlnum{10.9}\hlstd{,}\hlnum{11.1}\hlstd{)}
+\hlstd{Porcentaje} \hlcom{# Definiendo los pesos de los novillos}
+\end{alltt}
+\begin{verbatim}
+##  [1]  1.8  2.1  2.0  2.1  4.6  5.0  7.5  7.9  2.2  2.4  4.2  4.0  5.4  5.6
+## [15]  9.8  9.2  2.8  3.2  4.4  4.8  8.7  8.4 13.2 13.0  3.2  3.6  3.3  3.5
+## [29]  5.7  5.8 10.9 11.1
+\end{verbatim}
+\begin{alltt}
+\hlstd{datos3}\hlkwb{<-}\hlkwd{data.frame}\hlstd{(}\hlkwc{FactorA}\hlstd{=FactorA,}\hlkwc{FactorB}\hlstd{=FactorB,}
+                   \hlkwc{Porcentaje}\hlstd{=Porcentaje)}
+\hlstd{datos3}
+\end{alltt}
+\begin{verbatim}
+##    FactorA FactorB Porcentaje
+## 1        1       1        1.8
+## 2        1       1        2.1
+## 3        1       2        2.0
+## 4        1       2        2.1
+## 5        1       3        4.6
+## 6        1       3        5.0
+## 7        1       4        7.5
+## 8        1       4        7.9
+## 9        2       1        2.2
+## 10       2       1        2.4
+## 11       2       2        4.2
+## 12       2       2        4.0
+## 13       2       3        5.4
+## 14       2       3        5.6
+## 15       2       4        9.8
+## 16       2       4        9.2
+## 17       3       1        2.8
+## 18       3       1        3.2
+## 19       3       2        4.4
+## 20       3       2        4.8
+## 21       3       3        8.7
+## 22       3       3        8.4
+## 23       3       4       13.2
+## 24       3       4       13.0
+## 25       4       1        3.2
+## 26       4       1        3.6
+## 27       4       2        3.3
+## 28       4       2        3.5
+## 29       4       3        5.7
+## 30       4       3        5.8
+## 31       4       4       10.9
+## 32       4       4       11.1
+\end{verbatim}
+\begin{alltt}
+\hlcom{#Registrando en una hoja los datos del resultado del experimento}
+\hlstd{mod3}\hlkwb{<-}\hlkwd{aov}\hlstd{(Porcentaje}\hlopt{~}\hlstd{FactorA}\hlopt{*}\hlstd{FactorB,}\hlkwc{data} \hlstd{= datos3)}
+\hlkwd{summary}\hlstd{(mod3)} \hlcom{# Se muestra la tabla ANOVA del experimento}
+\end{alltt}
+\begin{verbatim}
+##                 Df Sum Sq Mean Sq F value   Pr(>F)    
+## FactorA          3  41.88   13.96  279.18 5.05e-14 ***
+## FactorB          3 283.94   94.65 1892.91  < 2e-16 ***
+## FactorA:FactorB  9  15.86    1.76   35.24 7.09e-09 ***
+## Residuals       16   0.80    0.05                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

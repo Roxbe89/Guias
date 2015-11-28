@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+#GUIA 9
+ls()
+rm(list=ls(all=TRUE))
+ls()
+library(foreign)
+HojaCat <- read.csv("HojaCat.csv", strip.white=TRUE);HojaCat
+attach(HojaCat, pos=2)
+search()
+
+tablaCont <- table(HojaCat); tablaCont
+length(HojaCat)
+suma.filas <- apply(tablaCont, 1, sum); suma.filas
+# El 1 indica que son totales por fila
+suma.columnas <- apply(tablaCont,2,sum); suma.columnas
+# Gráficos de barras para tabla de contingencia.
+barplot(t(tablaCont), main="Grafico de barras (Estado, Ocupacion)", xlab="Estado civil", ylab="Ocupacio", legend.text=TRUE)
+
+# Barras agrupadas
+barplot(t(tablaCont), main="Grafico de barras (Estado, Ocupacion)", xlab="Estado civil", ylab="Ocupacion", beside=TRUE, legend.text=TRUE)
+
+barplot(tablaCont, main="Gráfico de barras (Ocupación, Estado)", xlab="Ocupación\n",ylab="Estado civil", beside=TRUE, legend.text=TRUE)
+op <- options()
+options(digits=3) 
+options('digits')
+
+# Proporciones basadas en el total de la muestra, la suma de filas y columnas suman 1
+propTotal <- prop.table(tablaCont); propTotal
+barplot(t(propTotal), main="Grafico de barras (Estado, Ocupacion)", xlab="Estado civil\n",ylab="Ocupacion", beside=TRUE, legend.text=TRUE)
+
+# Proporciones basadas en el total por fila, cada fila suma 1.
+propFila <- prop.table(tablaCont, 1); propFila
+# Total por fila se indica en 1
+barplot(t(propFila), main="Grafico de barras (Estado, Ocupacion)", xlab="Estado civil\n",ylab="Ocupacion", beside=TRUE, legend.text=TRUE)
+
+# Proporciones basadas en el total por columna, cada columna suma 1.
+propColum <- prop.table(tablaCont, 2); propColum
+# Total por columna se indica en 2
+barplot(propColum, main="Gráfico de barras (Ocupación, Estado)", xlab="Ocupación\n",
+ylab="Estado civil", beside=TRUE, legend.text=TRUE)
+
+# Gráfico de barras no apiladas y colocación de leyenda
+barplot(table(Ocupacion, Estado), main="Gráfico de barras (Estado, Ocupación)", xlab =
+"Estado civil", ylab="Ocupación", beside=TRUE, legend.text=T)
+barplot(table(Estado, Ocupacion), main="Gráfico de barras (Ocupación, Estado)", xlab =
+"Ocupación", ylab="Estado civil", beside=TRUE, legend.text=TRUE)
+
+barplot(table(Estado, Ocupacion), main="Gráfico de barras (Ocupación, Estado)",
+xlab="Ocupación", ylab="Estado civil", beside=TRUE, legend.text=c("menor que 2", "2-3",
+"mayor que 3"))
+
+#Realizar la prueba o contraste Chi-cuadrado de independencia
+prueba <- chisq.test(tablaCont); prueba
+
+# Frecuencias absolutas esperadas para la prueba Chi-cuadrada
+prueba$expected # fij = fi./No. column
+
+@
+\end{document}

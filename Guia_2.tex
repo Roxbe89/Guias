@@ -1,0 +1,539 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#GUIA 2}
+
+\hlstd{v} \hlkwb{<-} \hlkwd{numeric}\hlstd{(}\hlnum{3}\hlstd{);v}
+\end{alltt}
+\begin{verbatim}
+## [1] 0 0 0
+\end{verbatim}
+\begin{alltt}
+\hlstd{v[}\hlnum{3}\hlstd{]} \hlkwb{<-} \hlnum{17}\hlstd{; v}
+\end{alltt}
+\begin{verbatim}
+## [1]  0  0 17
+\end{verbatim}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{3.1}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{6}\hlstd{)}
+\hlkwd{is.integer}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.double}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{length}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlkwd{edit}\hlstd{(x)}
+\hlstd{y} \hlkwb{=} \hlnum{1}\hlopt{:}\hlnum{4}\hlstd{; y}
+\end{alltt}
+\begin{verbatim}
+## [1] 1 2 3 4
+\end{verbatim}
+\begin{alltt}
+\hlstd{y[}\hlnum{2}\hlstd{]} \hlkwb{<-} \hlnum{5}
+\hlstd{u} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{12}\hlstd{; u1}\hlkwb{=}\hlstd{u[}\hlnum{2} \hlopt{*} \hlnum{1}\hlopt{:}\hlnum{5}\hlstd{]}
+\hlkwd{assign}\hlstd{(}\hlstr{"z"}\hlstd{,} \hlkwd{c}\hlstd{(x,} \hlnum{0}\hlstd{, x)); z}
+\end{alltt}
+\begin{verbatim}
+##  [1] 2.0 4.0 3.1 8.0 6.0 0.0 2.0 4.0 3.1 8.0 6.0
+\end{verbatim}
+\begin{alltt}
+\hlstd{s1} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{10}\hlstd{); s1}
+\end{alltt}
+\begin{verbatim}
+## [1]  2  3  4  5  6  7  8  9 10
+\end{verbatim}
+\begin{alltt}
+\hlstd{s2} \hlkwb{=} \hlkwd{seq}\hlstd{(}\hlkwc{from}\hlstd{=}\hlopt{-}\hlnum{1}\hlstd{,} \hlkwc{to}\hlstd{=}\hlnum{5}\hlstd{); s2}
+\end{alltt}
+\begin{verbatim}
+## [1] -1  0  1  2  3  4  5
+\end{verbatim}
+\begin{alltt}
+\hlstd{s3}\hlkwb{<-}\hlkwd{seq}\hlstd{(}\hlkwc{to}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{from}\hlstd{=}\hlopt{-}\hlnum{2}\hlstd{); s3}
+\end{alltt}
+\begin{verbatim}
+## [1] -2 -1  0  1  2
+\end{verbatim}
+\begin{alltt}
+\hlstd{s4}\hlkwb{=}\hlkwd{seq}\hlstd{(}\hlkwc{from}\hlstd{=}\hlopt{-}\hlnum{3}\hlstd{,} \hlkwc{to}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{by}\hlstd{=}\hlnum{0.2}\hlstd{); s4}
+\end{alltt}
+\begin{verbatim}
+##  [1] -3.0 -2.8 -2.6 -2.4 -2.2 -2.0 -1.8 -1.6 -1.4 -1.2 -1.0 -0.8 -0.6 -0.4
+## [15] -0.2  0.0  0.2  0.4  0.6  0.8  1.0  1.2  1.4  1.6  1.8  2.0  2.2  2.4
+## [29]  2.6  2.8  3.0
+\end{verbatim}
+\begin{alltt}
+\hlstd{s5} \hlkwb{<-} \hlkwd{rep}\hlstd{(s3,} \hlkwc{times}\hlstd{=}\hlnum{3}\hlstd{); s5}
+\end{alltt}
+\begin{verbatim}
+##  [1] -2 -1  0  1  2 -2 -1  0  1  2 -2 -1  0  1  2
+\end{verbatim}
+\begin{alltt}
+\hlnum{1}\hlopt{/}\hlstd{x}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.5000000 0.2500000 0.3225806 0.1250000 0.1666667
+\end{verbatim}
+\begin{alltt}
+\hlstd{v}\hlkwb{=}\hlnum{2}\hlopt{*}\hlstd{x}\hlopt{+}\hlstd{z}\hlopt{+}\hlnum{1}\hlstd{; v}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in 2 * x + z: longitud de objeto mayor no es múltiplo de la longitud de uno menor}}\begin{verbatim}
+##  [1]  7.0 13.0 10.3 25.0 19.0  5.0 11.0 11.2 20.1 21.0 11.0
+\end{verbatim}
+\begin{alltt}
+\hlstd{e1} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{4}\hlstd{); e2}\hlkwb{<-}\hlkwd{c}\hlstd{(}\hlnum{4}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{7}\hlstd{);} \hlkwd{crossprod}\hlstd{(e1,e2)}
+\end{alltt}
+\begin{verbatim}
+##      [,1]
+## [1,]   60
+\end{verbatim}
+\begin{alltt}
+\hlstd{e1} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{4}\hlstd{); e2}\hlkwb{<-}\hlkwd{c}\hlstd{(}\hlnum{4}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{7}\hlstd{);}\hlkwd{t}\hlstd{(e1)}\hlopt{%*%}\hlstd{e2}
+\end{alltt}
+\begin{verbatim}
+##      [,1]
+## [1,]   60
+\end{verbatim}
+\begin{alltt}
+\hlstd{xt} \hlkwb{=} \hlkwd{t}\hlstd{(x); xt}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    2    4  3.1    8    6
+\end{verbatim}
+\begin{alltt}
+\hlstd{u} \hlkwb{=} \hlkwd{exp}\hlstd{(y);u}
+\end{alltt}
+\begin{verbatim}
+## [1]   2.718282 148.413159  20.085537  54.598150
+\end{verbatim}
+\begin{alltt}
+\hlkwd{options}\hlstd{(}\hlkwc{digits}\hlstd{=}\hlnum{10}\hlstd{); u}
+\end{alltt}
+\begin{verbatim}
+## [1]   2.718281828 148.413159103  20.085536923  54.598150033
+\end{verbatim}
+\begin{alltt}
+\hlstd{resum} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlkwd{length}\hlstd{(y),} \hlkwd{sum}\hlstd{(y),} \hlkwd{prod}\hlstd{(y),} \hlkwd{min}\hlstd{(y),} \hlkwd{max}\hlstd{(y)); resum}
+\end{alltt}
+\begin{verbatim}
+## [1]  4 13 60  1  5
+\end{verbatim}
+\begin{alltt}
+\hlstd{yo} \hlkwb{<-} \hlkwd{sort}\hlstd{(y); yo}
+\end{alltt}
+\begin{verbatim}
+## [1] 1 3 4 5
+\end{verbatim}
+\begin{alltt}
+\hlstd{S}\hlkwb{<-}\hlkwd{character}\hlstd{()}
+\hlstd{deptos} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"Santa Ana"}\hlstd{,} \hlstr{"Sonsonate"}\hlstd{,} \hlstr{"San Salvador"}\hlstd{); deptos}
+\end{alltt}
+\begin{verbatim}
+## [1] "Santa Ana"    "Sonsonate"    "San Salvador"
+\end{verbatim}
+\begin{alltt}
+\hlstd{deptos[}\hlnum{4}\hlstd{]}\hlkwb{=}\hlstr{"Ahuachapán"}\hlstd{; deptos}
+\end{alltt}
+\begin{verbatim}
+## [1] "Santa Ana"    "Sonsonate"    "San Salvador" "Ahuachapán"
+\end{verbatim}
+\begin{alltt}
+\hlstd{codDeptos} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{11}\hlstd{,} \hlnum{12}\hlstd{,} \hlnum{13}\hlstd{,} \hlnum{14}\hlstd{)}
+\hlkwd{names}\hlstd{(codDeptos)} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"Usulután"}\hlstd{,} \hlstr{"San Miguel"}\hlstd{,} \hlstr{"Morazán"}\hlstd{,} \hlstr{"La Unión"}\hlstd{);codDeptos}
+\end{alltt}
+\begin{verbatim}
+##   Usulután San Miguel    Morazán   La Unión 
+##         11         12         13         14
+\end{verbatim}
+\begin{alltt}
+\hlstd{Oriente} \hlkwb{<-} \hlstd{codDeptos [}\hlkwd{c}\hlstd{(}\hlstr{"La Unión"}\hlstd{,} \hlstr{"San Miguel"}\hlstd{)];Oriente}
+\end{alltt}
+\begin{verbatim}
+##   La Unión San Miguel 
+##         14         12
+\end{verbatim}
+\begin{alltt}
+\hlstd{etiqs}\hlkwb{<-}\hlkwd{paste}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"X"}\hlstd{,} \hlstr{"Y"}\hlstd{),} \hlnum{1}\hlopt{:}\hlnum{10}\hlstd{,} \hlkwc{sep}\hlstd{=}\hlstr{""}\hlstd{); etiqs}
+\end{alltt}
+\begin{verbatim}
+##  [1] "X1"  "Y2"  "X3"  "Y4"  "X5"  "Y6"  "X7"  "Y8"  "X9"  "Y10"
+\end{verbatim}
+\begin{alltt}
+\hlstd{M} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{numeric}\hlstd{(),} \hlkwc{nrow} \hlstd{=} \hlnum{3}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{4}\hlstd{)}
+\hlstd{M[}\hlnum{2}\hlstd{,}\hlnum{3}\hlstd{]} \hlkwb{<-} \hlnum{6}\hlstd{; M}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3] [,4]
+## [1,]   NA   NA   NA   NA
+## [2,]   NA   NA    6   NA
+## [3,]   NA   NA   NA   NA
+\end{verbatim}
+\begin{alltt}
+\hlstd{A} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{8}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{12}\hlstd{),} \hlkwc{nrow}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{3}\hlstd{); A}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    2    6   10
+## [2,]    4    8   12
+\end{verbatim}
+\begin{alltt}
+\hlkwd{mode}\hlstd{(A);} \hlkwd{dim}\hlstd{(A);} \hlkwd{attributes}\hlstd{(A);} \hlkwd{is.matrix}\hlstd{(A);} \hlkwd{is.array}\hlstd{(A)}
+\end{alltt}
+\begin{verbatim}
+## [1] "numeric"
+## [1] 2 3
+## $dim
+## [1] 2 3
+## [1] TRUE
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{B} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{12}\hlstd{,} \hlkwc{nrow}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{4}\hlstd{); B}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+\end{verbatim}
+\begin{alltt}
+\hlstd{x1} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{2}\hlstd{); x1}
+\end{alltt}
+\begin{verbatim}
+## [1]  0  2  4  6  8 10
+\end{verbatim}
+\begin{alltt}
+\hlstd{x2} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{11}\hlstd{,} \hlnum{2}\hlstd{); x2}
+\end{alltt}
+\begin{verbatim}
+## [1]  1  3  5  7  9 11
+\end{verbatim}
+\begin{alltt}
+\hlstd{x3} \hlkwb{<-} \hlkwd{runif}\hlstd{(}\hlnum{6}\hlstd{); x3} \hlcom{# Vector con valores de una uniforme(0,1)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.68384496216 0.64125003852 0.06690298952 0.95745976223 0.45587672922
+## [6] 0.01438915939
+\end{verbatim}
+\begin{alltt}
+\hlstd{Xcol} \hlkwb{<-} \hlkwd{cbind}\hlstd{(x1, x2, x3); Xcol}
+\end{alltt}
+\begin{verbatim}
+##      x1 x2            x3
+## [1,]  0  1 0.68384496216
+## [2,]  2  3 0.64125003852
+## [3,]  4  5 0.06690298952
+## [4,]  6  7 0.95745976223
+## [5,]  8  9 0.45587672922
+## [6,] 10 11 0.01438915939
+\end{verbatim}
+\begin{alltt}
+\hlstd{Xfil} \hlkwb{<-} \hlkwd{rbind}\hlstd{(x1, x2, x3); Xfil}
+\end{alltt}
+\begin{verbatim}
+##            [,1]         [,2]          [,3]         [,4]         [,5]
+## x1 0.0000000000 2.0000000000 4.00000000000 6.0000000000 8.0000000000
+## x2 1.0000000000 3.0000000000 5.00000000000 7.0000000000 9.0000000000
+## x3 0.6838449622 0.6412500385 0.06690298952 0.9574597622 0.4558767292
+##              [,6]
+## x1 10.00000000000
+## x2 11.00000000000
+## x3  0.01438915939
+\end{verbatim}
+\begin{alltt}
+\hlstd{X} \hlkwb{<-} \hlstd{Xfil[}\hlnum{1}\hlopt{:}\hlnum{3}\hlstd{,} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{3}\hlstd{)]; X}
+\end{alltt}
+\begin{verbatim}
+##            [,1]          [,2]
+## x1 2.0000000000 4.00000000000
+## x2 3.0000000000 5.00000000000
+## x3 0.6412500385 0.06690298952
+\end{verbatim}
+\begin{alltt}
+\hlstd{v}\hlkwb{<-}\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2}\hlstd{); v} \hlopt{%*%}\hlstd{A}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]   10   22   34
+\end{verbatim}
+\begin{alltt}
+\hlstd{P} \hlkwb{<-} \hlstd{A} \hlopt{%*%} \hlstd{B; P}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3] [,4]
+## [1,]   44   98  152  206
+## [2,]   56  128  200  272
+\end{verbatim}
+\begin{alltt}
+\hlnum{2}\hlopt{*}\hlstd{A}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    4   12   20
+## [2,]    8   16   24
+\end{verbatim}
+\begin{alltt}
+\hlnum{2}\hlopt{%*%}\hlstd{A}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in 2 \%*\% A: argumentos no compatibles}}\begin{alltt}
+\hlkwd{length}\hlstd{(A)}
+\end{alltt}
+\begin{verbatim}
+## [1] 6
+\end{verbatim}
+\begin{alltt}
+\hlstd{T}\hlkwb{=}\hlkwd{sqrt}\hlstd{(B); T}
+\end{alltt}
+\begin{verbatim}
+##             [,1]        [,2]        [,3]        [,4]
+## [1,] 1.000000000 2.000000000 2.645751311 3.162277660
+## [2,] 1.414213562 2.236067977 2.828427125 3.316624790
+## [3,] 1.732050808 2.449489743 3.000000000 3.464101615
+\end{verbatim}
+\begin{alltt}
+\hlkwd{t}\hlstd{(A)}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2]
+## [1,]    2    4
+## [2,]    6    8
+## [3,]   10   12
+\end{verbatim}
+\begin{alltt}
+\hlstd{C} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{12}\hlstd{),} \hlkwc{nrow}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{2}\hlstd{); C}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2]
+## [1,]    2   10
+## [2,]    1   12
+\end{verbatim}
+\begin{alltt}
+\hlkwd{det}\hlstd{(C)}
+\end{alltt}
+\begin{verbatim}
+## [1] 14
+\end{verbatim}
+\begin{alltt}
+\hlstd{InvC} \hlkwb{<-} \hlkwd{solve}\hlstd{(C) ; InvC}
+\end{alltt}
+\begin{verbatim}
+##                [,1]          [,2]
+## [1,]  0.85714285714 -0.7142857143
+## [2,] -0.07142857143  0.1428571429
+\end{verbatim}
+\begin{alltt}
+\hlstd{b}\hlkwb{=}\hlkwd{diag}\hlstd{(}\hlnum{2}\hlstd{); InvC}\hlkwb{<-}\hlkwd{solve}\hlstd{(C, b); InvC}
+\end{alltt}
+\begin{verbatim}
+##                [,1]          [,2]
+## [1,]  0.85714285714 -0.7142857143
+## [2,] -0.07142857143  0.1428571429
+\end{verbatim}
+\begin{alltt}
+\hlkwd{eigen}\hlstd{(C)}
+\end{alltt}
+\begin{verbatim}
+## $values
+## [1] 12.916079783  1.083920217
+## 
+## $vectors
+##               [,1]           [,2]
+## [1,] -0.6754894393 -0.99583021557
+## [2,] -0.7373696613  0.09122599279
+\end{verbatim}
+\begin{alltt}
+\hlkwd{diag}\hlstd{(nombMatriz)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in diag(nombMatriz): objeto 'nombMatriz' no encontrado}}\begin{alltt}
+\hlkwd{diag}\hlstd{(nomVector)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in diag(nomVector): objeto 'nomVector' no encontrado}}\begin{alltt}
+\hlkwd{diag}\hlstd{(}\hlnum{4}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    0    0    0
+## [2,]    0    1    0    0
+## [3,]    0    0    1    0
+## [4,]    0    0    0    1
+\end{verbatim}
+\begin{alltt}
+\hlkwd{c}\hlstd{(}\hlkwd{length}\hlstd{(A),} \hlkwd{sum}\hlstd{(A),} \hlkwd{prod}\hlstd{(A),} \hlkwd{min}\hlstd{(A),} \hlkwd{max}\hlstd{(A))}
+\end{alltt}
+\begin{verbatim}
+## [1]     6    42 46080     2    12
+\end{verbatim}
+\begin{alltt}
+\hlstd{O} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{sort}\hlstd{(C),} \hlkwc{nrow}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{2}\hlstd{); O}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2]
+## [1,]    1   10
+## [2,]    2   12
+\end{verbatim}
+\begin{alltt}
+\hlstd{nombres} \hlkwb{<-} \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"Carlos"}\hlstd{,} \hlstr{"José"}\hlstd{,} \hlstr{"Ana"}\hlstd{,} \hlstr{"René"}\hlstd{,} \hlstr{"María"}\hlstd{,} \hlstr{"Mario"}\hlstd{),}\hlkwc{nrow}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{ncol}\hlstd{=}\hlnum{2}\hlstd{); nombres}
+\end{alltt}
+\begin{verbatim}
+##      [,1]     [,2]   
+## [1,] "Carlos" "René" 
+## [2,] "José"   "María"
+## [3,] "Ana"    "Mario"
+\end{verbatim}
+\begin{alltt}
+\hlstd{X} \hlkwb{<-} \hlkwd{array}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{7}\hlstd{,} \hlnum{9}\hlstd{,} \hlnum{11}\hlstd{),} \hlkwc{dim}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{3}\hlstd{)); X}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    1    5    9
+## [2,]    3    7   11
+\end{verbatim}
+\begin{alltt}
+\hlstd{Z} \hlkwb{<-} \hlkwd{array}\hlstd{(}\hlnum{1}\hlstd{,} \hlkwd{c}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{3}\hlstd{)); Z}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    1    1    1
+## [2,]    1    1    1
+## [3,]    1    1    1
+\end{verbatim}
+\begin{alltt}
+\hlstd{W} \hlkwb{<-} \hlnum{2}\hlopt{*}\hlstd{Z}\hlopt{+}\hlnum{1}\hlstd{; W}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    3    3    3
+## [2,]    3    3    3
+## [3,]    3    3    3
+\end{verbatim}
+\begin{alltt}
+\hlstd{TX} \hlkwb{<-} \hlkwd{t}\hlstd{(X); TX}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2]
+## [1,]    1    3
+## [2,]    5    7
+## [3,]    9   11
+\end{verbatim}
+\begin{alltt}
+\hlstd{a} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{6}\hlstd{); a}
+\end{alltt}
+\begin{verbatim}
+## [1] 2 4 6
+\end{verbatim}
+\begin{alltt}
+\hlstd{b} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{3}\hlstd{;b}
+\end{alltt}
+\begin{verbatim}
+## [1] 1 2 3
+\end{verbatim}
+\begin{alltt}
+\hlstd{M} \hlkwb{<-} \hlstd{a} \hlopt{%o%} \hlstd{b; M}
+\end{alltt}
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    2    4    6
+## [2,]    4    8   12
+## [3,]    6   12   18
+\end{verbatim}
+\begin{alltt}
+\hlstd{Arreglo3} \hlkwb{<-} \hlkwd{array}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{8}\hlstd{,} \hlnum{11}\hlopt{:}\hlnum{18}\hlstd{,} \hlnum{111}\hlopt{:}\hlnum{118}\hlstd{),} \hlkwc{dim} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{3}\hlstd{));Arreglo3}
+\end{alltt}
+\begin{verbatim}
+## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    3    5    7
+## [2,]    2    4    6    8
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]   11   13   15   17
+## [2,]   12   14   16   18
+## 
+## , , 3
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]  111  113  115  117
+## [2,]  112  114  116  118
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{document}

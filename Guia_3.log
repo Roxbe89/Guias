@@ -1,0 +1,197 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  26 NOV 2015 21:39
+entering extended mode
+**Guia_3.tex
+(Guia_3.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+) (framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (Guia_3.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen109
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen110
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+)
+Package color Info: Redefining color shadecolor on input line 55.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 59.
+Missing character: There is no í in font cmtt10!
+
+Overfull \hbox (80.24629pt too wide) in paragraph at lines 121--121
+[][]\OT1/cmtt/m/n/10 lista1[][]<-[][]list[][]([][]padre[][]=[][]"Pedro"[][],[] 
+[]madre[][]=[][]"Mara"[][],[] []no.hijos[][]=[][]3[][],[] []edad.hijos[][]=[][]
+c[][]([][]4[][],[][]7[][],[][]9[][]));lista1[][] 
+ []
+
+Missing character: There is no í in font cmtt10!
+Missing character: There is no í in font cmtt10!
+Missing character: There is no í in font cmtt10!
+Missing character: There is no í in font cmtt10!
+Missing character: There is no í in font cmtt10!
+Missing character: There is no á in font cmtt10!
+Missing character: There is no Á in font cmtt10!
+Missing character: There is no í in font cmtt10!
+Missing character: There is no é in font cmtt10!
+Missing character: There is no é in font cmtt10!
+
+Overfull \hbox (353.24391pt too wide) in paragraph at lines 269--269
+[][]\OT1/cmtt/m/n/10 Notas[] []<-[] []matrix[][]([][]c[][]([][]2[][],[] []5[][]
+,[] []7[][],[] []6[][],[] []8[][],[] []2[][],[] []4[][],[] []9[][],[] []10[][])
+,[] []ncol[][]=[][]3[][],[][]dimnames[][]=[][]list[][]([][]c[][]([][]"Matemtica
+"[][],[][]"lgebra"[][],[][]"Geometra"[][]),[][]c[][]([][]"Juan"[][],[][]"Jos"[]
+[],[][]"Ren"[][]))); Notas[][] 
+ []
+
+Missing character: There is no é in font cmtt10!
+Missing character: There is no é in font cmtt10!
+Missing character: There is no á in font cmtt10!
+Missing character: There is no Á in font cmtt10!
+Missing character: There is no í in font cmtt10!
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 283--283
+[]\OT1/cmtt/m/n/10 ##  [1] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE FALS
+E FALSE FALSE[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 307--307
+[]\OT1/cmtt/m/n/10 ##  [1]  1.1919050  0.8734501 -2.4452087  0.6334359 -0.77096
+03 -0.8252430[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 307--307
+[]\OT1/cmtt/m/n/10 ##  [7]  0.9281459 -1.3015194 -0.8678214 -1.0852498 -1.22721
+23 -0.1346940[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 307--307
+[]\OT1/cmtt/m/n/10 ## [13] -0.5525445 -0.4815168 -0.9144788 -0.4132464 -0.39016
+78  0.0797854[] 
+ []
+
+
+Overfull \hbox (232.49496pt too wide) in paragraph at lines 394--394
+[][]\OT1/cmtt/m/n/10 datos[] []<-[] []matrix[][]([][]c[][]([][]150[][],[] []160
+[][],[] []180[][],[] []205[][],[] []65[][],[] []68[][],[] []65[][],[] []69[][])
+,[] []ncol[][]=[][]2[][],[] []dimnames[][]=[][]list[][]([][]c[][](),[][]c[][]([
+][]"Estatura"[][],[][]"Peso"[][]))); datos[][] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 447--447
+[]\OT1/cmtt/m/n/10 ##  [4] "package:stats"     "package:graphics"  "package:grD
+evices"[] 
+ []
+
+[1
+
+{C:/Users/Roxy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+[3] [4] [5] [6] [7] (Guia_3.aux) ) 
+Here is how much of TeX's memory you used:
+ 1240 strings out of 493673
+ 16375 string characters out of 3141533
+ 122811 words of memory out of 3000000
+ 4625 multiletter control sequences out of 15000+200000
+ 3976 words of font info for 16 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,5n,25p,552b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb>
+Output written on Guia_3.pdf (7 pages, 42477 bytes).
+PDF statistics:
+ 38 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+#GUIA 14
+
+dbinom(4,8,0.5)
+x <- 2; n=8; p=1/2
+pbinom(x, size = n, prob = p, lower.tail=TRUE)
+x <- 4; n=8; p=1/2
+
+#primera forma
+F <- 1 - pbinom(x, n, p, lower.tail=TRUE); F
+
+#segunda forma
+pbinom(4, size=8, prob=0.5, lower.tail=FALSE)
+
+x <- 3; mu <- 6
+ppois(x, lambda = mu, lower.tail=TRUE)
+
+#primera forma
+sum(dpois(c(6,7,8),lambda = 6))
+
+# segunda forma
+F8 <- ppois(8, lambda = 6, lower.tail=TRUE)
+F5 <- ppois(5,lambda = 6, lower.tail=TRUE)
+F8 - F5
+n <- 30
+
+#genera 30 valores de una distribuciOn de Poisson con Î» = 6
+x <- rpois(n, lambda=mu)
+
+#calcula las probabilidades para cada valor generado
+y <- dpois(x, lambda=mu)
+#genera el grafico de distribucion
+plot(x, y, xlab="x", ylab="Funcion de probalidad", main="Distribucion de Poisson: lambda = 6",
+type="h")
+
+#une los puntos a las lineas
+points(x, y, pch=21)
+
+x <- 0:2 
+m = 11
+n <- 4; k=2
+# x define el nÃºmero de globos con premio
+
+# se construye la distribucion de frecuencias del numero de premios
+Tabla <- data.frame(Probabilidad=dhyper(x, m, n, k))
+rownames(Tabla) <- c("Ningún premio", "Solamente uno", "Dos premios")
+Tabla
+x = 1; m= 10; n= 3; k= 2;
+dhyper(x, m, n, k)
+
+# x define el numero de intentos fallidos
+x <- 0:5; p=0.1
+
+Tabla <- data.frame(Probabilidad=dgeom(x, prob=p))
+Tabla
+
+# nombrando las filas de la distribución de frecuencias
+rownames(Tabla) <- c("Venta en el primer intento", "Venta en el segundo intento","Venta en el tercer intento", "Venta en el cuarto intento", "Venta en el quinto intento", "Venta en el sexto intento")
+x=0; n=7; p=0.1
+dbinom(x, n, p, log = FALSE)
+
+y <- 0:5; r=3; p <- 0.1
+Tabla <- data.frame(Probabilidad=dnbinom(y, size=r, prob=p))
+rownames(Tabla) <- 0:5
+Tabla
+
+# Definir los parámetros apropiados
+n <- 15; p <- 0.25
+# generar 100 números aleatorios binomiales
+x = rbinom(100, n, p); x
+# Histograma para la muestra aleatoria de tamaño 100
+hist(x, main="X ~ Binomial(n=15, p=0.25)", xlab="X = Número de éxitos", ylab="masa de
+probabilidad", probability=TRUE, col="blue")
+xvals=0:n; points(xvals, dbinom(xvals, n, p), type="h", lwd=3)
+points(xvals, dbinom(xvals, n, p), type="p", lwd=3)
+
+# Definir los parámetros apropiados
+n <- 200000; p <- 3/100000; lambda=n*p
+# generar 100 números aleatorios de la distribución
+x = rpois(100, lambda); x
+# Histograma para la muestra aleatoria de tamaño 100
+hist(x, main=expression(paste("X ~ Poisson( ", lambda, " = 6 )")), xlab="X = Número de eventos a
+una tasa constante", ylab="masa de probabilidad", probability=TRUE, col="blue")
+xvals=0:n; points(xvals, dpois(xvals, lambda), type="h", lwd=3)
+points(xvals, dpois(xvals, lambda), type="p", lwd=3)
+
+@
+
+
+
+\end{document}

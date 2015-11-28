@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+#GUIA 15
+
+x <- 55; a=0; b <- 90
+#usando la función propia de R
+punif(x, min=a, max=b, lower.tail=TRUE)
+
+F55=punif(55, min=a, max=b, lower.tail=TRUE)
+F15=punif(15, min=a, max=b, lower.tail=TRUE)
+F55-F15
+F55=punif(55, min=a, max=b, lower.tail=TRUE);F55
+#Luego multiplicando ambas probabilidades se obtiene el valor pedido 0.1728.
+(1-F55)*( F55-F15)
+
+#y los cuantiles-normales para la variable X:
+p <- c(0.80); media=5; d.t=1
+qnorm(p, mean=media, sd=d.t, lower.tail=TRUE)
+#y los cuantiles-t para la variable Y:
+p <- c(0.80); g.l <- 10
+qt(p, df=g.l, lower.tail=TRUE)
+
+#Como se desea calcular P(x ??? 4.5) :
+n <- 16; x <- 4.5; mu=5; sigma=1; d.t=sigma/sqrt(n)
+pnorm(x, mean=mu, sd=d.t, lower.tail=FALSE)
+
+#La probabilidad P(X ??? 5) se obtiene así:
+x <- 5; teta=7
+pexp(x, rate=1/teta, lower.tail=FALSE)
+#y de igual forma P(X < 3) :
+x <- 3; teta=7
+pexp(x, rate=1/teta, lower.tail=TRUE)
+
+pexp(4, rate=1/teta, lower.tail=FALSE)
+
+#Hay que calcular el percentil 90:
+p <- 0.9; teta <- 7
+qexp(p, rate=1/teta, lower.tail=TRUE)
+#resultando 16.12 años.
+
+qexp(0.5, rate=1/teta, lower.tail=TRUE)
+#y en el segundo caso, el percentil 68, b = 7.97
+qexp(0.68, rate=1/teta, lower.tail=TRUE)
+#o de esta otra manera
+qexp(0.32, rate=1/teta, lower.tail=FALSE)
+
+# Definir los parámetros apropiados
+min <- -2; max <- 4
+# generar 100 números aleatorios de la distribución
+x = runif(100, min, max); x
+# Histograma para la nuestra aleatoria de tamaño 100
+hist(x, main="X ~ Uniforme(min=-2, max=4", xlab="X", ylab="densidad de probabilidad",
+probability=TRUE, col="green")
+# Graficar la función de densidad, use la función curve() para variable continua
+curve(dunif(x, min, max), col="blue", add=TRUE)
+
+#genera los valores aleatorios de la distribución
+x.norm <- rnorm(n=200,mean=10, sd=2)
+
+# Podemos obtener un histograma usando la función hist()
+hist(x.norm, breaks = "Sturges", freq = TRUE, probability = FALSE, include.lowest = TRUE, right
+= TRUE, density = NULL, angle = 45, col = "steelblue1", border = NULL, main = "Histograma de
+datos observados", axes = TRUE, plot = TRUE, labels = FALSE)
+plot(density(x.norm), main="Densidad estimada de los datos")
+plot(ecdf(x.norm),main="Función de distribución acumulada teórica")
+
+
+# Definir los parámetros apropiados
+media <- 4.5; desviacion <- 0.75
+#Generar 100 números aleatorios de la distribución
+x = rnorm(100, media, desviacion); x
+# Histograma para la nuestra aleatoria de tamaño 100
+hist(x,main=expression(paste("X ~ N(", mu, " = 4.5, ", sigma, " = 0.75)")), xlab="X", ylab="densidad
+de probabilidad", probability=TRUE, col=gray(0.9))
+curve(dnorm(x, media, desviacion), col="red", lwd=2, add=TRUE)
+
+# Definir el parámetro apropiado
+media <- 2500; razon <- 1/media;n=100
+# generar 100 números aleatorios de la distribución
+x = rexp(n, razon); x
+# Histograma para la nuestra aleatoria de tamaño 100
+hist(x, main="X ~ Exponencial( media = 2500 )", xlab="X", ylab="densidad de probabilidad",
+probability=TRUE, col="green")
+curve(dexp(x, razon), col="blue", lwd=2, add=TRUE)
+
+
+x <- 0.7
+p <- pnorm(x, mean=1, sd=1, lower.tail = TRUE); p
+
+z <- 0.7
+p1 <- pnorm(z, mean=0, sd=1); p1
+p2 <- pnorm(z, mean=0, sd=1, lower.tail=FALSE); p2
+p3 <- 1-pnorm(z, mean=0, sd=1);p3
+
+p <- 0.75
+z <- qnorm(p, mean=0, sd=1, lower.tail = TRUE); z
+
+x <- 18.55; gl <- 12
+p <- pchisq(x, gl, lower.tail = FALSE); p
+
+@
+
+\end{document}
